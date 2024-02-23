@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830471462B87B5F4005AEEB4 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 830471452B87B5F4005AEEB4 /* Then */; };
+		830471492B87B62B005AEEB4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 830471482B87B62B005AEEB4 /* SnapKit */; };
+		8304714C2B87B691005AEEB4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8304714B2B87B691005AEEB4 /* Kingfisher */; };
+		8304714F2B87B70C005AEEB4 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 8304714E2B87B70C005AEEB4 /* Moya */; };
+		830471522B87B831005AEEB4 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 830471512B87B831005AEEB4 /* FSCalendar */; };
+		830471542B87B9E2005AEEB4 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830471532B87B9E2005AEEB4 /* UIColor+.swift */; };
+		830471562B87BA0E005AEEB4 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830471552B87BA0E005AEEB4 /* UIStackView+.swift */; };
+		830471582B87BA52005AEEB4 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830471572B87BA52005AEEB4 /* UILabel+.swift */; };
+		8304715A2B87BBC2005AEEB4 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830471592B87BBC2005AEEB4 /* UIButton+.swift */; };
+		8304715C2B87BBEB005AEEB4 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304715B2B87BBEB005AEEB4 /* UITextField+.swift */; };
+		8304715E2B87BD22005AEEB4 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304715D2B87BD22005AEEB4 /* UIImageView+.swift */; };
 		833A6AF12B873317001370CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A6AF02B873317001370CD /* AppDelegate.swift */; };
 		833A6AF32B873317001370CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A6AF22B873317001370CD /* SceneDelegate.swift */; };
 		833A6AF52B873317001370CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A6AF42B873317001370CD /* ViewController.swift */; };
@@ -24,6 +35,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		830471532B87B9E2005AEEB4 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		830471552B87BA0E005AEEB4 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		830471572B87BA52005AEEB4 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		830471592B87BBC2005AEEB4 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		8304715B2B87BBEB005AEEB4 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		8304715D2B87BD22005AEEB4 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		833A6AED2B873317001370CD /* Cafebara-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cafebara-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		833A6AF02B873317001370CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		833A6AF22B873317001370CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +64,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8304714C2B87B691005AEEB4 /* Kingfisher in Frameworks */,
+				830471462B87B5F4005AEEB4 /* Then in Frameworks */,
+				8304714F2B87B70C005AEEB4 /* Moya in Frameworks */,
+				830471522B87B831005AEEB4 /* FSCalendar in Frameworks */,
+				830471492B87B62B005AEEB4 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +159,13 @@
 		833DC7FF2B874D090096703B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8304715B2B87BBEB005AEEB4 /* UITextField+.swift */,
+				830471592B87BBC2005AEEB4 /* UIButton+.swift */,
+				830471572B87BA52005AEEB4 /* UILabel+.swift */,
+				830471532B87B9E2005AEEB4 /* UIColor+.swift */,
+				830471552B87BA0E005AEEB4 /* UIStackView+.swift */,
 				833DC8002B874D250096703B /* UIView+.swift */,
+				8304715D2B87BD22005AEEB4 /* UIImageView+.swift */,
 				833DC8052B874D9A0096703B /* NSObject+.swift */,
 			);
 			path = Extensions;
@@ -219,6 +247,13 @@
 			dependencies = (
 			);
 			name = "Cafebara-iOS";
+			packageProductDependencies = (
+				830471452B87B5F4005AEEB4 /* Then */,
+				830471482B87B62B005AEEB4 /* SnapKit */,
+				8304714B2B87B691005AEEB4 /* Kingfisher */,
+				8304714E2B87B70C005AEEB4 /* Moya */,
+				830471512B87B831005AEEB4 /* FSCalendar */,
+			);
 			productName = "Cafebara-iOS";
 			productReference = 833A6AED2B873317001370CD /* Cafebara-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -247,6 +282,13 @@
 				Base,
 			);
 			mainGroup = 833A6AE42B873317001370CD;
+			packageReferences = (
+				830471442B87B5F4005AEEB4 /* XCRemoteSwiftPackageReference "Then" */,
+				830471472B87B62B005AEEB4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8304714A2B87B691005AEEB4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				8304714D2B87B70C005AEEB4 /* XCRemoteSwiftPackageReference "Moya" */,
+				830471502B87B831005AEEB4 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = 833A6AEE2B873317001370CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -274,17 +316,23 @@
 			files = (
 				833DC7FA2B874CD50096703B /* FontLiterals.swift in Sources */,
 				833DC8132B8750EA0096703B /* HomeViewModel.swift in Sources */,
+				830471582B87BA52005AEEB4 /* UILabel+.swift in Sources */,
 				833DC7FC2B874CE50096703B /* StringLiterals.swift in Sources */,
+				8304715A2B87BBC2005AEEB4 /* UIButton+.swift in Sources */,
 				833DC8042B874D5C0096703B /* UITableViewRegisterable.swift in Sources */,
 				833DC8012B874D250096703B /* UIView+.swift in Sources */,
+				8304715E2B87BD22005AEEB4 /* UIImageView+.swift in Sources */,
 				833DC7FE2B874CED0096703B /* SizeLiterals.swift in Sources */,
 				833A6AF52B873317001370CD /* ViewController.swift in Sources */,
 				833A6AF12B873317001370CD /* AppDelegate.swift in Sources */,
 				833DC8082B874DD90096703B /* UICollectionViewRegisterable.swift in Sources */,
 				833DC8172B8751150096703B /* a.swift in Sources */,
+				830471562B87BA0E005AEEB4 /* UIStackView+.swift in Sources */,
 				833DC8152B8750F30096703B /* HomeView.swift in Sources */,
 				833DC8062B874D9A0096703B /* NSObject+.swift in Sources */,
+				8304715C2B87BBEB005AEEB4 /* UITextField+.swift in Sources */,
 				833A6AF32B873317001370CD /* SceneDelegate.swift in Sources */,
+				830471542B87B9E2005AEEB4 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +550,77 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		830471442B87B5F4005AEEB4 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		830471472B87B62B005AEEB4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		8304714A2B87B691005AEEB4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+		8304714D2B87B70C005AEEB4 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+		830471502B87B831005AEEB4 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		830471452B87B5F4005AEEB4 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 830471442B87B5F4005AEEB4 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		830471482B87B62B005AEEB4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 830471472B87B62B005AEEB4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		8304714B2B87B691005AEEB4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8304714A2B87B691005AEEB4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		8304714E2B87B70C005AEEB4 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8304714D2B87B70C005AEEB4 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		830471512B87B831005AEEB4 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 830471502B87B831005AEEB4 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 833A6AE52B873317001370CD /* Project object */;
 }
