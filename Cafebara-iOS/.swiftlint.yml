@@ -1,0 +1,15 @@
+# 실행에서 제외할 룰 식별자
+disabled_rules:
+- line_length
+- trailing_whitespace
+- function_parameter_count
+- file_length
+- identifier_name
+- function_body_length
+- nesting
+- cyclomatic_complexity
+# 린트 과정에서 무시할 파일 경로
+excluded:
+- Cafebara-iOS/Application/AppDelegate.swift
+- Cafebara-iOS/Application/SceneDelegate.swift
+- Cafebara-iOS/Present/ViewController.swift
