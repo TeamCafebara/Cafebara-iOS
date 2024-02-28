@@ -45,6 +45,9 @@
 		830471952B8CD90D005AEEB4 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 830471942B8CD90D005AEEB4 /* FirebaseRemoteConfigSwift */; };
 		830471972B8CD90D005AEEB4 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 830471962B8CD90D005AEEB4 /* FirebaseStorage */; };
 		830471992B8CD90D005AEEB4 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 830471982B8CD90D005AEEB4 /* FirebaseStorageCombine-Community */; };
+		8309F58D2B8F1A6600A1420A /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 8309F58C2B8F1A6600A1420A /* SwiftLintFramework */; };
+		8309F58F2B8F1A6600A1420A /* swiftlint in Frameworks */ = {isa = PBXBuildFile; productRef = 8309F58E2B8F1A6600A1420A /* swiftlint */; };
+		8309F5972B8F1CC700A1420A /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8309F5962B8F1CC700A1420A /* .swiftlint.yml */; };
 		833A6AF12B873317001370CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A6AF02B873317001370CD /* AppDelegate.swift */; };
 		833A6AF32B873317001370CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A6AF22B873317001370CD /* SceneDelegate.swift */; };
 		833A6AF52B873317001370CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A6AF42B873317001370CD /* ViewController.swift */; };
@@ -68,6 +71,7 @@
 		830471592B87BBC2005AEEB4 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		8304715B2B87BBEB005AEEB4 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		8304715D2B87BD22005AEEB4 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		8309F5962B8F1CC700A1420A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		833A6AED2B873317001370CD /* Cafebara-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cafebara-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		833A6AF02B873317001370CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		833A6AF22B873317001370CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,12 +106,14 @@
 				8304717D2B8CD90D005AEEB4 /* FirebaseFirestore in Frameworks */,
 				8304717B2B8CD90D005AEEB4 /* FirebaseDynamicLinks in Frameworks */,
 				830471992B8CD90D005AEEB4 /* FirebaseStorageCombine-Community in Frameworks */,
+				8309F58F2B8F1A6600A1420A /* swiftlint in Frameworks */,
 				830471672B8CD90D005AEEB4 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				830471852B8CD90D005AEEB4 /* FirebaseFunctionsCombine-Community in Frameworks */,
 				830471892B8CD90D005AEEB4 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				8304718D2B8CD90D005AEEB4 /* FirebaseMLModelDownloader in Frameworks */,
 				830471872B8CD90D005AEEB4 /* FirebaseInAppMessaging-Beta in Frameworks */,
 				830471912B8CD90D005AEEB4 /* FirebasePerformance in Frameworks */,
+				8309F58D2B8F1A6600A1420A /* SwiftLintFramework in Frameworks */,
 				830471732B8CD90D005AEEB4 /* FirebaseAuthCombine-Community in Frameworks */,
 				830471692B8CD90D005AEEB4 /* FirebaseAnalyticsSwift in Frameworks */,
 				830471792B8CD90D005AEEB4 /* FirebaseDatabaseSwift in Frameworks */,
@@ -132,6 +138,7 @@
 		833A6AE42B873317001370CD = {
 			isa = PBXGroup;
 			children = (
+				8309F5962B8F1CC700A1420A /* .swiftlint.yml */,
 				833A6AEF2B873317001370CD /* Cafebara-iOS */,
 				833A6AEE2B873317001370CD /* Products */,
 			);
@@ -334,6 +341,8 @@
 				830471942B8CD90D005AEEB4 /* FirebaseRemoteConfigSwift */,
 				830471962B8CD90D005AEEB4 /* FirebaseStorage */,
 				830471982B8CD90D005AEEB4 /* FirebaseStorageCombine-Community */,
+				8309F58C2B8F1A6600A1420A /* SwiftLintFramework */,
+				8309F58E2B8F1A6600A1420A /* swiftlint */,
 			);
 			productName = "Cafebara-iOS";
 			productReference = 833A6AED2B873317001370CD /* Cafebara-iOS.app */;
@@ -370,6 +379,7 @@
 				8304714D2B87B70C005AEEB4 /* XCRemoteSwiftPackageReference "Moya" */,
 				830471502B87B831005AEEB4 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				830471632B8CD90D005AEEB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8309F58B2B8F1A6600A1420A /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 833A6AEE2B873317001370CD /* Products */;
 			projectDirPath = "";
@@ -385,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8309F5972B8F1CC700A1420A /* .swiftlint.yml in Resources */,
 				833A6AFA2B87331A001370CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,6 +693,14 @@
 				minimumVersion = 10.21.0;
 			};
 		};
+		8309F58B2B8F1A6600A1420A /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.54.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -844,6 +863,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 830471632B8CD90D005AEEB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		8309F58C2B8F1A6600A1420A /* SwiftLintFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8309F58B2B8F1A6600A1420A /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = SwiftLintFramework;
+		};
+		8309F58E2B8F1A6600A1420A /* swiftlint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8309F58B2B8F1A6600A1420A /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = swiftlint;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
