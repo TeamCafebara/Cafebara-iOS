@@ -8,10 +8,10 @@
 import UIKit
 import Kingfisher
 
-extension UIImageView{
+extension UIImageView {
     
     /// url을 문자열로 넘겨주면 kingfisher를 통해 이미지 설정
-    func kfSetImage(url : String?){
+    func kfSetImage(url: String?) {
         guard let url = url else { return }
         
         if let url = URL(string: url) {
