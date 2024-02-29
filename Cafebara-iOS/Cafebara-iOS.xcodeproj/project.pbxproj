@@ -64,6 +64,14 @@
 		A43C73EA2B8F31C900B39F21 /* SUIT-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E62B8F31C900B39F21 /* SUIT-Bold.ttf */; };
 		A43C73EB2B8F31C900B39F21 /* SUIT-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E72B8F31C900B39F21 /* SUIT-Regular.ttf */; };
 		A43C73EE2B9049C900B39F21 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A43C73ED2B9049C900B39F21 /* .swiftlint.yml */; };
+		A43C73F42B90513900B39F21 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C73F32B90513900B39F21 /* Config.swift */; };
+		A43C73F62B90515300B39F21 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C73F52B90515300B39F21 /* GeneralResponse.swift */; };
+		A43C73F82B90515D00B39F21 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C73F72B90515D00B39F21 /* NetworkLoggerPlugin.swift */; };
+		A43C73FA2B90516C00B39F21 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C73F92B90516C00B39F21 /* APIConstant.swift */; };
+		A43C73FC2B90517200B39F21 /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C73FB2B90517200B39F21 /* URLConstant.swift */; };
+		A43C74002B90518800B39F21 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C73FF2B90518800B39F21 /* BaseTargetType.swift */; };
+		A43C74032B90525F00B39F21 /* HomeTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C74022B90525F00B39F21 /* HomeTarget.swift */; };
+		A43C74062B90527000B39F21 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C74052B90527000B39F21 /* HomeAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +102,14 @@
 		A43C73E62B8F31C900B39F21 /* SUIT-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Bold.ttf"; sourceTree = "<group>"; };
 		A43C73E72B8F31C900B39F21 /* SUIT-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Regular.ttf"; sourceTree = "<group>"; };
 		A43C73ED2B9049C900B39F21 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A43C73F32B90513900B39F21 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		A43C73F52B90515300B39F21 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		A43C73F72B90515D00B39F21 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
+		A43C73F92B90516C00B39F21 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		A43C73FB2B90517200B39F21 /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
+		A43C73FF2B90518800B39F21 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		A43C74022B90525F00B39F21 /* HomeTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTarget.swift; sourceTree = "<group>"; };
+		A43C74052B90527000B39F21 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +309,10 @@
 		A43C73E22B8F30BD00B39F21 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A43C73F22B90512B00B39F21 /* Base */,
+				A43C73F12B90512500B39F21 /* Enviornment */,
+				A43C73F02B90512200B39F21 /* API */,
+				A43C73EF2B90511400B39F21 /* APIService */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -306,6 +326,58 @@
 				A43C73E42B8F31C900B39F21 /* SUIT-SemiBold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		A43C73EF2B90511400B39F21 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				A43C74012B90525400B39F21 /* Home */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		A43C73F02B90512200B39F21 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A43C74042B90526400B39F21 /* Home */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A43C73F12B90512500B39F21 /* Enviornment */ = {
+			isa = PBXGroup;
+			children = (
+				A43C73F32B90513900B39F21 /* Config.swift */,
+			);
+			path = Enviornment;
+			sourceTree = "<group>";
+		};
+		A43C73F22B90512B00B39F21 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A43C73F52B90515300B39F21 /* GeneralResponse.swift */,
+				A43C73F72B90515D00B39F21 /* NetworkLoggerPlugin.swift */,
+				A43C73F92B90516C00B39F21 /* APIConstant.swift */,
+				A43C73FB2B90517200B39F21 /* URLConstant.swift */,
+				A43C73FF2B90518800B39F21 /* BaseTargetType.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A43C74012B90525400B39F21 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A43C74022B90525F00B39F21 /* HomeTarget.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A43C74042B90526400B39F21 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A43C74052B90527000B39F21 /* HomeAPI.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,23 +519,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A43C74002B90518800B39F21 /* BaseTargetType.swift in Sources */,
 				833DC7FA2B874CD50096703B /* FontLiterals.swift in Sources */,
+				A43C73F62B90515300B39F21 /* GeneralResponse.swift in Sources */,
 				833DC8132B8750EA0096703B /* HomeViewModel.swift in Sources */,
 				830471582B87BA52005AEEB4 /* UILabel+.swift in Sources */,
 				833DC7FC2B874CE50096703B /* StringLiterals.swift in Sources */,
 				8304715A2B87BBC2005AEEB4 /* UIButton+.swift in Sources */,
 				833DC8042B874D5C0096703B /* UITableViewRegisterable.swift in Sources */,
+				A43C73FA2B90516C00B39F21 /* APIConstant.swift in Sources */,
 				833DC8012B874D250096703B /* UIView+.swift in Sources */,
 				8304715E2B87BD22005AEEB4 /* UIImageView+.swift in Sources */,
 				833DC7FE2B874CED0096703B /* SizeLiterals.swift in Sources */,
 				833A6AF52B873317001370CD /* ViewController.swift in Sources */,
+				A43C74062B90527000B39F21 /* HomeAPI.swift in Sources */,
 				833A6AF12B873317001370CD /* AppDelegate.swift in Sources */,
 				833DC8082B874DD90096703B /* UICollectionViewRegisterable.swift in Sources */,
 				833DC8172B8751150096703B /* a.swift in Sources */,
 				830471562B87BA0E005AEEB4 /* UIStackView+.swift in Sources */,
+				A43C74032B90525F00B39F21 /* HomeTarget.swift in Sources */,
 				833DC8152B8750F30096703B /* HomeView.swift in Sources */,
+				A43C73FC2B90517200B39F21 /* URLConstant.swift in Sources */,
 				833DC8062B874D9A0096703B /* NSObject+.swift in Sources */,
 				8304715C2B87BBEB005AEEB4 /* UITextField+.swift in Sources */,
+				A43C73F42B90513900B39F21 /* Config.swift in Sources */,
+				A43C73F82B90515D00B39F21 /* NetworkLoggerPlugin.swift in Sources */,
 				833A6AF32B873317001370CD /* SceneDelegate.swift in Sources */,
 				830471542B87B9E2005AEEB4 /* UIColor+.swift in Sources */,
 			);
