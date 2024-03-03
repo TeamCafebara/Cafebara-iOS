@@ -45,9 +45,6 @@
 		830471952B8CD90D005AEEB4 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 830471942B8CD90D005AEEB4 /* FirebaseRemoteConfigSwift */; };
 		830471972B8CD90D005AEEB4 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 830471962B8CD90D005AEEB4 /* FirebaseStorage */; };
 		830471992B8CD90D005AEEB4 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 830471982B8CD90D005AEEB4 /* FirebaseStorageCombine-Community */; };
-		8309F58D2B8F1A6600A1420A /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 8309F58C2B8F1A6600A1420A /* SwiftLintFramework */; };
-		8309F58F2B8F1A6600A1420A /* swiftlint in Frameworks */ = {isa = PBXBuildFile; productRef = 8309F58E2B8F1A6600A1420A /* swiftlint */; };
-		8309F5972B8F1CC700A1420A /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8309F5962B8F1CC700A1420A /* .swiftlint.yml */; };
 		833A6AF12B873317001370CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A6AF02B873317001370CD /* AppDelegate.swift */; };
 		833A6AF32B873317001370CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A6AF22B873317001370CD /* SceneDelegate.swift */; };
 		833A6AF52B873317001370CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A6AF42B873317001370CD /* ViewController.swift */; };
@@ -62,6 +59,19 @@
 		833DC8132B8750EA0096703B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DC8122B8750EA0096703B /* HomeViewModel.swift */; };
 		833DC8152B8750F30096703B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DC8142B8750F30096703B /* HomeView.swift */; };
 		833DC8172B8751150096703B /* a.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DC8162B8751150096703B /* a.swift */; };
+		A43C73E82B8F31C900B39F21 /* SUIT-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E42B8F31C900B39F21 /* SUIT-SemiBold.ttf */; };
+		A43C73E92B8F31C900B39F21 /* SUIT-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E52B8F31C900B39F21 /* SUIT-Medium.ttf */; };
+		A43C73EA2B8F31C900B39F21 /* SUIT-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E62B8F31C900B39F21 /* SUIT-Bold.ttf */; };
+		A43C73EB2B8F31C900B39F21 /* SUIT-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E72B8F31C900B39F21 /* SUIT-Regular.ttf */; };
+		A43C73EE2B9049C900B39F21 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A43C73ED2B9049C900B39F21 /* .swiftlint.yml */; };
+		A43C73F42B90513900B39F21 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C73F32B90513900B39F21 /* Config.swift */; };
+		A43C73F62B90515300B39F21 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C73F52B90515300B39F21 /* GeneralResponse.swift */; };
+		A43C73F82B90515D00B39F21 /* NetworkLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C73F72B90515D00B39F21 /* NetworkLoggerPlugin.swift */; };
+		A43C73FA2B90516C00B39F21 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C73F92B90516C00B39F21 /* APIConstant.swift */; };
+		A43C73FC2B90517200B39F21 /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C73FB2B90517200B39F21 /* URLConstant.swift */; };
+		A43C74002B90518800B39F21 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C73FF2B90518800B39F21 /* BaseTargetType.swift */; };
+		A43C74032B90525F00B39F21 /* HomeTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C74022B90525F00B39F21 /* HomeTarget.swift */; };
+		A43C74062B90527000B39F21 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C74052B90527000B39F21 /* HomeAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,7 +81,6 @@
 		830471592B87BBC2005AEEB4 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		8304715B2B87BBEB005AEEB4 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		8304715D2B87BD22005AEEB4 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
-		8309F5962B8F1CC700A1420A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		833A6AED2B873317001370CD /* Cafebara-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cafebara-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		833A6AF02B873317001370CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		833A6AF22B873317001370CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +97,19 @@
 		833DC8122B8750EA0096703B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		833DC8142B8750F30096703B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		833DC8162B8751150096703B /* a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a.swift; sourceTree = "<group>"; };
+		A43C73E42B8F31C900B39F21 /* SUIT-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-SemiBold.ttf"; sourceTree = "<group>"; };
+		A43C73E52B8F31C900B39F21 /* SUIT-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Medium.ttf"; sourceTree = "<group>"; };
+		A43C73E62B8F31C900B39F21 /* SUIT-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Bold.ttf"; sourceTree = "<group>"; };
+		A43C73E72B8F31C900B39F21 /* SUIT-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Regular.ttf"; sourceTree = "<group>"; };
+		A43C73ED2B9049C900B39F21 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A43C73F32B90513900B39F21 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		A43C73F52B90515300B39F21 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		A43C73F72B90515D00B39F21 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
+		A43C73F92B90516C00B39F21 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		A43C73FB2B90517200B39F21 /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
+		A43C73FF2B90518800B39F21 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		A43C74022B90525F00B39F21 /* HomeTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTarget.swift; sourceTree = "<group>"; };
+		A43C74052B90527000B39F21 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,14 +128,12 @@
 				8304717D2B8CD90D005AEEB4 /* FirebaseFirestore in Frameworks */,
 				8304717B2B8CD90D005AEEB4 /* FirebaseDynamicLinks in Frameworks */,
 				830471992B8CD90D005AEEB4 /* FirebaseStorageCombine-Community in Frameworks */,
-				8309F58F2B8F1A6600A1420A /* swiftlint in Frameworks */,
 				830471672B8CD90D005AEEB4 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				830471852B8CD90D005AEEB4 /* FirebaseFunctionsCombine-Community in Frameworks */,
 				830471892B8CD90D005AEEB4 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				8304718D2B8CD90D005AEEB4 /* FirebaseMLModelDownloader in Frameworks */,
 				830471872B8CD90D005AEEB4 /* FirebaseInAppMessaging-Beta in Frameworks */,
 				830471912B8CD90D005AEEB4 /* FirebasePerformance in Frameworks */,
-				8309F58D2B8F1A6600A1420A /* SwiftLintFramework in Frameworks */,
 				830471732B8CD90D005AEEB4 /* FirebaseAuthCombine-Community in Frameworks */,
 				830471692B8CD90D005AEEB4 /* FirebaseAnalyticsSwift in Frameworks */,
 				830471792B8CD90D005AEEB4 /* FirebaseDatabaseSwift in Frameworks */,
@@ -138,7 +158,7 @@
 		833A6AE42B873317001370CD = {
 			isa = PBXGroup;
 			children = (
-				8309F5962B8F1CC700A1420A /* .swiftlint.yml */,
+				A43C73ED2B9049C900B39F21 /* .swiftlint.yml */,
 				833A6AEF2B873317001370CD /* Cafebara-iOS */,
 				833A6AEE2B873317001370CD /* Products */,
 			);
@@ -157,7 +177,7 @@
 			children = (
 				833DC7F52B874C340096703B /* Application */,
 				833DC7F42B874C2B0096703B /* Global */,
-				833DC7F32B874C210096703B /* Network */,
+				A43C73E22B8F30BD00B39F21 /* Network */,
 				833DC7F22B874C030096703B /* Presentation */,
 				833A6AFE2B87331A001370CD /* Info.plist */,
 			);
@@ -170,13 +190,6 @@
 				833DC8092B8750120096703B /* Home */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		833DC7F32B874C210096703B /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		833DC7F42B874C2B0096703B /* Global */ = {
@@ -202,6 +215,7 @@
 		833DC7F72B874CB20096703B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A43C73E32B8F316300B39F21 /* Font */,
 				833A6AF92B87331A001370CD /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -292,6 +306,80 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		A43C73E22B8F30BD00B39F21 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A43C73F22B90512B00B39F21 /* Base */,
+				A43C73F12B90512500B39F21 /* Enviornment */,
+				A43C73F02B90512200B39F21 /* API */,
+				A43C73EF2B90511400B39F21 /* APIService */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A43C73E32B8F316300B39F21 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A43C73E62B8F31C900B39F21 /* SUIT-Bold.ttf */,
+				A43C73E52B8F31C900B39F21 /* SUIT-Medium.ttf */,
+				A43C73E72B8F31C900B39F21 /* SUIT-Regular.ttf */,
+				A43C73E42B8F31C900B39F21 /* SUIT-SemiBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		A43C73EF2B90511400B39F21 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				A43C74012B90525400B39F21 /* Home */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		A43C73F02B90512200B39F21 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A43C74042B90526400B39F21 /* Home */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A43C73F12B90512500B39F21 /* Enviornment */ = {
+			isa = PBXGroup;
+			children = (
+				A43C73F32B90513900B39F21 /* Config.swift */,
+			);
+			path = Enviornment;
+			sourceTree = "<group>";
+		};
+		A43C73F22B90512B00B39F21 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A43C73F52B90515300B39F21 /* GeneralResponse.swift */,
+				A43C73F72B90515D00B39F21 /* NetworkLoggerPlugin.swift */,
+				A43C73F92B90516C00B39F21 /* APIConstant.swift */,
+				A43C73FB2B90517200B39F21 /* URLConstant.swift */,
+				A43C73FF2B90518800B39F21 /* BaseTargetType.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A43C74012B90525400B39F21 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A43C74022B90525F00B39F21 /* HomeTarget.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A43C74042B90526400B39F21 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A43C74052B90527000B39F21 /* HomeAPI.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,6 +387,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 833A6B012B87331A001370CD /* Build configuration list for PBXNativeTarget "Cafebara-iOS" */;
 			buildPhases = (
+				A43C73EC2B90488D00B39F21 /* SwiftLint Script */,
 				833A6AE92B873317001370CD /* Sources */,
 				833A6AEA2B873317001370CD /* Frameworks */,
 				833A6AEB2B873317001370CD /* Resources */,
@@ -341,8 +430,6 @@
 				830471942B8CD90D005AEEB4 /* FirebaseRemoteConfigSwift */,
 				830471962B8CD90D005AEEB4 /* FirebaseStorage */,
 				830471982B8CD90D005AEEB4 /* FirebaseStorageCombine-Community */,
-				8309F58C2B8F1A6600A1420A /* SwiftLintFramework */,
-				8309F58E2B8F1A6600A1420A /* swiftlint */,
 			);
 			productName = "Cafebara-iOS";
 			productReference = 833A6AED2B873317001370CD /* Cafebara-iOS.app */;
@@ -379,7 +466,6 @@
 				8304714D2B87B70C005AEEB4 /* XCRemoteSwiftPackageReference "Moya" */,
 				830471502B87B831005AEEB4 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				830471632B8CD90D005AEEB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				8309F58B2B8F1A6600A1420A /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 833A6AEE2B873317001370CD /* Products */;
 			projectDirPath = "";
@@ -395,35 +481,69 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8309F5972B8F1CC700A1420A /* .swiftlint.yml in Resources */,
+				A43C73EE2B9049C900B39F21 /* .swiftlint.yml in Resources */,
+				A43C73E82B8F31C900B39F21 /* SUIT-SemiBold.ttf in Resources */,
+				A43C73EB2B8F31C900B39F21 /* SUIT-Regular.ttf in Resources */,
+				A43C73EA2B8F31C900B39F21 /* SUIT-Bold.ttf in Resources */,
+				A43C73E92B8F31C900B39F21 /* SUIT-Medium.ttf in Resources */,
 				833A6AFA2B87331A001370CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A43C73EC2B90488D00B39F21 /* SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		833A6AE92B873317001370CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A43C74002B90518800B39F21 /* BaseTargetType.swift in Sources */,
 				833DC7FA2B874CD50096703B /* FontLiterals.swift in Sources */,
+				A43C73F62B90515300B39F21 /* GeneralResponse.swift in Sources */,
 				833DC8132B8750EA0096703B /* HomeViewModel.swift in Sources */,
 				830471582B87BA52005AEEB4 /* UILabel+.swift in Sources */,
 				833DC7FC2B874CE50096703B /* StringLiterals.swift in Sources */,
 				8304715A2B87BBC2005AEEB4 /* UIButton+.swift in Sources */,
 				833DC8042B874D5C0096703B /* UITableViewRegisterable.swift in Sources */,
+				A43C73FA2B90516C00B39F21 /* APIConstant.swift in Sources */,
 				833DC8012B874D250096703B /* UIView+.swift in Sources */,
 				8304715E2B87BD22005AEEB4 /* UIImageView+.swift in Sources */,
 				833DC7FE2B874CED0096703B /* SizeLiterals.swift in Sources */,
 				833A6AF52B873317001370CD /* ViewController.swift in Sources */,
+				A43C74062B90527000B39F21 /* HomeAPI.swift in Sources */,
 				833A6AF12B873317001370CD /* AppDelegate.swift in Sources */,
 				833DC8082B874DD90096703B /* UICollectionViewRegisterable.swift in Sources */,
 				833DC8172B8751150096703B /* a.swift in Sources */,
 				830471562B87BA0E005AEEB4 /* UIStackView+.swift in Sources */,
+				A43C74032B90525F00B39F21 /* HomeTarget.swift in Sources */,
 				833DC8152B8750F30096703B /* HomeView.swift in Sources */,
+				A43C73FC2B90517200B39F21 /* URLConstant.swift in Sources */,
 				833DC8062B874D9A0096703B /* NSObject+.swift in Sources */,
 				8304715C2B87BBEB005AEEB4 /* UITextField+.swift in Sources */,
+				A43C73F42B90513900B39F21 /* Config.swift in Sources */,
+				A43C73F82B90515D00B39F21 /* NetworkLoggerPlugin.swift in Sources */,
 				833A6AF32B873317001370CD /* SceneDelegate.swift in Sources */,
 				830471542B87B9E2005AEEB4 /* UIColor+.swift in Sources */,
 			);
@@ -561,6 +681,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = XGXWL95BMU;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cafebara-iOS/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Cafebara;
@@ -596,6 +717,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = XGXWL95BMU;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cafebara-iOS/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Cafebara;
@@ -691,14 +813,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.21.0;
-			};
-		};
-		8309F58B2B8F1A6600A1420A /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/SwiftLint";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.54.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -863,16 +977,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 830471632B8CD90D005AEEB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
-		};
-		8309F58C2B8F1A6600A1420A /* SwiftLintFramework */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8309F58B2B8F1A6600A1420A /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = SwiftLintFramework;
-		};
-		8309F58E2B8F1A6600A1420A /* swiftlint */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8309F58B2B8F1A6600A1420A /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = swiftlint;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

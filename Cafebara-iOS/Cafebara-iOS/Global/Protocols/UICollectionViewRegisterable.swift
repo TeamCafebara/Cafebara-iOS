@@ -47,7 +47,9 @@ extension UICollectionHeaderViewRegisterable where Self: UICollectionReusableVie
         guard let headerView = collectionView.dequeueReusableSupplementaryView(
             ofKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: self.className,
-            for: indexPath) as? Self else { return UICollectionReusableView() as! Self }
+            for: indexPath) as? Self else {
+                return Self()
+        }
         return headerView
     }
 }
@@ -71,7 +73,9 @@ extension UICollectionFooterViewRegisterable where Self: UICollectionReusableVie
         guard let footerView = collectionView.dequeueReusableSupplementaryView(
             ofKind: UICollectionView.elementKindSectionFooter,
             withReuseIdentifier: self.className,
-            for: indexPath) as? Self else { return UICollectionReusableView() as! Self }
+            for: indexPath) as? Self else {
+            return Self()
+        }
         return footerView
     }
 }
