@@ -65,6 +65,27 @@ extension FontLevel {
             return 11
         }
     }
+    
+    var lineHeight: CGFloat {
+        switch self {
+        case .heading:
+            return 31
+        case .title1:
+            return 28
+        case .title2:
+            return 25
+        case .title3, .body1:
+            return 22
+        case .body2, .body3:
+            return 20
+        case .body4:
+            return 18
+        case .caption1:
+            return 16
+        case .caption2:
+            return 13
+        }
+    }
 }
 
 extension UIFont {
