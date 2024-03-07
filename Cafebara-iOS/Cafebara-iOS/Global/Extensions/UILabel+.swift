@@ -36,7 +36,7 @@ extension UILabel {
         attributedText = attributedString
     }
     
-    func asLineHeight(fontStyle: FontLevel) {
+    func asLineHeight(_ fontStyle: FontLevel) {
         
         let lineHeight = fontStyle.lineHeight
         print(lineHeight)
