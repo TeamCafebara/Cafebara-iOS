@@ -78,6 +78,7 @@
 		A488FB4D2B9B04CF004D4A09 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A488FB4C2B9B04CF004D4A09 /* RxCocoa */; };
 		A488FB4F2B9B04CF004D4A09 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A488FB4E2B9B04CF004D4A09 /* RxCocoa-Dynamic */; };
 		A488FB512B9B04CF004D4A09 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A488FB502B9B04CF004D4A09 /* RxRelay */; };
+		A488FB542B9B10FB004D4A09 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488FB532B9B10FB004D4A09 /* CustomAlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 		A43C74022B90525F00B39F21 /* HomeTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTarget.swift; sourceTree = "<group>"; };
 		A43C74052B90527000B39F21 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 		A488FB452B9AFAF4004D4A09 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
+		A488FB532B9B10FB004D4A09 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				A488FB442B9AFADD004D4A09 /* CustomNavigation */,
+				A488FB522B9B10DE004D4A09 /* CustomAlert */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -407,6 +410,14 @@
 				A488FB452B9AFAF4004D4A09 /* CustomNavigationView.swift */,
 			);
 			path = CustomNavigation;
+			sourceTree = "<group>";
+		};
+		A488FB522B9B10DE004D4A09 /* CustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				A488FB532B9B10FB004D4A09 /* CustomAlertView.swift */,
+			);
+			path = CustomAlert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -573,6 +584,7 @@
 				833DC8082B874DD90096703B /* UICollectionViewRegisterable.swift in Sources */,
 				833DC8172B8751150096703B /* a.swift in Sources */,
 				830471562B87BA0E005AEEB4 /* UIStackView+.swift in Sources */,
+				A488FB542B9B10FB004D4A09 /* CustomAlertView.swift in Sources */,
 				A43C74032B90525F00B39F21 /* HomeTarget.swift in Sources */,
 				833DC8152B8750F30096703B /* HomeView.swift in Sources */,
 				A43C73FC2B90517200B39F21 /* URLConstant.swift in Sources */,
