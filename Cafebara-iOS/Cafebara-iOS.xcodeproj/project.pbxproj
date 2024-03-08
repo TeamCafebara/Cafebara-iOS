@@ -72,6 +72,12 @@
 		A43C74002B90518800B39F21 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C73FF2B90518800B39F21 /* BaseTargetType.swift */; };
 		A43C74032B90525F00B39F21 /* HomeTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C74022B90525F00B39F21 /* HomeTarget.swift */; };
 		A43C74062B90527000B39F21 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43C74052B90527000B39F21 /* HomeAPI.swift */; };
+		A488FB462B9AFAF4004D4A09 /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488FB452B9AFAF4004D4A09 /* CustomNavigationView.swift */; };
+		A488FB492B9B04CF004D4A09 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = A488FB482B9B04CF004D4A09 /* RxBlocking */; };
+		A488FB4B2B9B04CF004D4A09 /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A488FB4A2B9B04CF004D4A09 /* RxBlocking-Dynamic */; };
+		A488FB4D2B9B04CF004D4A09 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A488FB4C2B9B04CF004D4A09 /* RxCocoa */; };
+		A488FB4F2B9B04CF004D4A09 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A488FB4E2B9B04CF004D4A09 /* RxCocoa-Dynamic */; };
+		A488FB512B9B04CF004D4A09 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A488FB502B9B04CF004D4A09 /* RxRelay */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +116,7 @@
 		A43C73FF2B90518800B39F21 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
 		A43C74022B90525F00B39F21 /* HomeTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTarget.swift; sourceTree = "<group>"; };
 		A43C74052B90527000B39F21 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		A488FB452B9AFAF4004D4A09 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +128,7 @@
 				8304717F2B8CD90D005AEEB4 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				830471772B8CD90D005AEEB4 /* FirebaseDatabase in Frameworks */,
 				8304714C2B87B691005AEEB4 /* Kingfisher in Frameworks */,
+				A488FB4F2B9B04CF004D4A09 /* RxCocoa-Dynamic in Frameworks */,
 				830471972B8CD90D005AEEB4 /* FirebaseStorage in Frameworks */,
 				830471462B87B5F4005AEEB4 /* Then in Frameworks */,
 				830471652B8CD90D005AEEB4 /* FirebaseAnalytics in Frameworks */,
@@ -134,17 +142,21 @@
 				8304718D2B8CD90D005AEEB4 /* FirebaseMLModelDownloader in Frameworks */,
 				830471872B8CD90D005AEEB4 /* FirebaseInAppMessaging-Beta in Frameworks */,
 				830471912B8CD90D005AEEB4 /* FirebasePerformance in Frameworks */,
+				A488FB4D2B9B04CF004D4A09 /* RxCocoa in Frameworks */,
 				830471732B8CD90D005AEEB4 /* FirebaseAuthCombine-Community in Frameworks */,
 				830471692B8CD90D005AEEB4 /* FirebaseAnalyticsSwift in Frameworks */,
 				830471792B8CD90D005AEEB4 /* FirebaseDatabaseSwift in Frameworks */,
 				8304714F2B87B70C005AEEB4 /* Moya in Frameworks */,
+				A488FB512B9B04CF004D4A09 /* RxRelay in Frameworks */,
 				830471932B8CD90D005AEEB4 /* FirebaseRemoteConfig in Frameworks */,
 				830471522B87B831005AEEB4 /* FSCalendar in Frameworks */,
 				830471712B8CD90D005AEEB4 /* FirebaseAuth in Frameworks */,
 				830471832B8CD90D005AEEB4 /* FirebaseFunctions in Frameworks */,
 				8304718B2B8CD90D005AEEB4 /* FirebaseInstallations in Frameworks */,
 				830471812B8CD90D005AEEB4 /* FirebaseFirestoreSwift in Frameworks */,
+				A488FB4B2B9B04CF004D4A09 /* RxBlocking-Dynamic in Frameworks */,
 				8304716B2B8CD90D005AEEB4 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				A488FB492B9B04CF004D4A09 /* RxBlocking in Frameworks */,
 				8304716D2B8CD90D005AEEB4 /* FirebaseAppCheck in Frameworks */,
 				830471952B8CD90D005AEEB4 /* FirebaseRemoteConfigSwift in Frameworks */,
 				8304716F2B8CD90D005AEEB4 /* FirebaseAppDistribution-Beta in Frameworks */,
@@ -187,6 +199,7 @@
 		833DC7F22B874C030096703B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A488FB432B9AFAD5004D4A09 /* Common */,
 				833DC8092B8750120096703B /* Home */,
 			);
 			path = Presentation;
@@ -380,6 +393,22 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		A488FB432B9AFAD5004D4A09 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A488FB442B9AFADD004D4A09 /* CustomNavigation */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A488FB442B9AFADD004D4A09 /* CustomNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				A488FB452B9AFAF4004D4A09 /* CustomNavigationView.swift */,
+			);
+			path = CustomNavigation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,6 +459,11 @@
 				830471942B8CD90D005AEEB4 /* FirebaseRemoteConfigSwift */,
 				830471962B8CD90D005AEEB4 /* FirebaseStorage */,
 				830471982B8CD90D005AEEB4 /* FirebaseStorageCombine-Community */,
+				A488FB482B9B04CF004D4A09 /* RxBlocking */,
+				A488FB4A2B9B04CF004D4A09 /* RxBlocking-Dynamic */,
+				A488FB4C2B9B04CF004D4A09 /* RxCocoa */,
+				A488FB4E2B9B04CF004D4A09 /* RxCocoa-Dynamic */,
+				A488FB502B9B04CF004D4A09 /* RxRelay */,
 			);
 			productName = "Cafebara-iOS";
 			productReference = 833A6AED2B873317001370CD /* Cafebara-iOS.app */;
@@ -466,6 +500,7 @@
 				8304714D2B87B70C005AEEB4 /* XCRemoteSwiftPackageReference "Moya" */,
 				830471502B87B831005AEEB4 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				830471632B8CD90D005AEEB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A488FB472B9B04CF004D4A09 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 833A6AEE2B873317001370CD /* Products */;
 			projectDirPath = "";
@@ -522,6 +557,7 @@
 				A43C74002B90518800B39F21 /* BaseTargetType.swift in Sources */,
 				833DC7FA2B874CD50096703B /* FontLiterals.swift in Sources */,
 				A43C73F62B90515300B39F21 /* GeneralResponse.swift in Sources */,
+				A488FB462B9AFAF4004D4A09 /* CustomNavigationView.swift in Sources */,
 				833DC8132B8750EA0096703B /* HomeViewModel.swift in Sources */,
 				830471582B87BA52005AEEB4 /* UILabel+.swift in Sources */,
 				833DC7FC2B874CE50096703B /* StringLiterals.swift in Sources */,
@@ -815,6 +851,14 @@
 				minimumVersion = 10.21.0;
 			};
 		};
+		A488FB472B9B04CF004D4A09 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -977,6 +1021,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 830471632B8CD90D005AEEB4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		A488FB482B9B04CF004D4A09 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A488FB472B9B04CF004D4A09 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		A488FB4A2B9B04CF004D4A09 /* RxBlocking-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A488FB472B9B04CF004D4A09 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxBlocking-Dynamic";
+		};
+		A488FB4C2B9B04CF004D4A09 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A488FB472B9B04CF004D4A09 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		A488FB4E2B9B04CF004D4A09 /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A488FB472B9B04CF004D4A09 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		A488FB502B9B04CF004D4A09 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A488FB472B9B04CF004D4A09 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
