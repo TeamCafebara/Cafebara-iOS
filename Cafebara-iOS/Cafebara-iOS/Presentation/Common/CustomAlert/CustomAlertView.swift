@@ -9,6 +9,8 @@ import UIKit
 
 import SnapKit
 import Then
+import RxSwift
+import RxCocoa
 
 enum AlertType {
     case small
@@ -38,6 +40,7 @@ final class CustomAlertView: UIView {
     // MARK: - Properties
     
     var delegate: AlertTappedDelegate?
+    private let disposeBag = DisposeBag()
     
     // MARK: - UI Components
     
@@ -57,6 +60,7 @@ final class CustomAlertView: UIView {
         setAlertUI(type: type, title: title, subTitle: subTitle)
         setHierarchy()
         setLayout()
+        setDelegate()
     }
     
     @available(*, unavailable)
@@ -175,13 +179,29 @@ private extension CustomAlertView {
         leftButton.snp.makeConstraints {
             $0.leading.bottom.equalToSuperview().inset(22)
             $0.width.equalTo((SizeLiterals.Screen.screenWidth - 117) / 2)
-            $0.height.equalTo(52)
+            $0.height.equalTo(44)
         }
         
         rightButton.snp.makeConstraints {
             $0.trailing.bottom.equalToSuperview().inset(22)
             $0.width.equalTo((SizeLiterals.Screen.screenWidth - 117) / 2)
-            $0.height.equalTo(52)
+            $0.height.equalTo(44)
         }
+    }
+    
+    func setDelegate() {
+        leftButton.rx.tap
+            .bind { [weak self] in
+                guard let self else { return }
+                self.delegate?.leftButtonTapped()
+            }
+            .disposed(by: disposeBag)
+        
+        rightButton.rx.tap
+            .bind { [weak self] in
+                guard let self else { return }
+                self.delegate?.rightButtonTapped()
+            }
+            .disposed(by: disposeBag)
     }
 }
