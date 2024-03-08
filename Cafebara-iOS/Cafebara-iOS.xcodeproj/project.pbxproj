@@ -50,6 +50,7 @@
 		A488FB972B9B5E6E004D4A09 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A488FB962B9B5E6E004D4A09 /* RxSwift */; };
 		A488FBA22B9B5FC1004D4A09 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A488FBA12B9B5FC1004D4A09 /* SnapKit */; };
 		A488FBA52B9B616B004D4A09 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A488FBA42B9B616B004D4A09 /* FSCalendar */; };
+		A488FBA82B9B6B8E004D4A09 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488FBA72B9B6B8E004D4A09 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		A43C74052B90527000B39F21 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 		A488FB452B9AFAF4004D4A09 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 		A488FB532B9B10FB004D4A09 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		A488FBA72B9B6B8E004D4A09 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +342,7 @@
 		A488FB432B9AFAD5004D4A09 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A488FBA62B9B6B7D004D4A09 /* CustomButton */,
 				A488FB442B9AFADD004D4A09 /* CustomNavigation */,
 				A488FB522B9B10DE004D4A09 /* CustomAlert */,
 			);
@@ -360,6 +363,14 @@
 				A488FB532B9B10FB004D4A09 /* CustomAlertView.swift */,
 			);
 			path = CustomAlert;
+			sourceTree = "<group>";
+		};
+		A488FBA62B9B6B7D004D4A09 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				A488FBA72B9B6B8E004D4A09 /* CustomButton.swift */,
+			);
+			path = CustomButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,6 +503,7 @@
 				833DC7FE2B874CED0096703B /* SizeLiterals.swift in Sources */,
 				833A6AF52B873317001370CD /* ViewController.swift in Sources */,
 				A43C74062B90527000B39F21 /* HomeAPI.swift in Sources */,
+				A488FBA82B9B6B8E004D4A09 /* CustomButton.swift in Sources */,
 				833A6AF12B873317001370CD /* AppDelegate.swift in Sources */,
 				833DC8082B874DD90096703B /* UICollectionViewRegisterable.swift in Sources */,
 				833DC8172B8751150096703B /* a.swift in Sources */,
