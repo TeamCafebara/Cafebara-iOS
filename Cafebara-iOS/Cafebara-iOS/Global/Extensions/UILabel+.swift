@@ -36,16 +36,24 @@ extension UILabel {
         attributedText = attributedString
     }
     
-    /// UILabel 간격 조정
-    func setLineSpacing(spacing: CGFloat) {
-        guard let text = text else { return }
+    func asLineHeight(_ fontStyle: FontLevel) {
         
-        let attributeString = NSMutableAttributedString(string: text)
-        let style = NSMutableParagraphStyle()
-        style.lineSpacing = spacing
-        attributeString.addAttribute(.paragraphStyle,
-                                     value: style,
-                                     range: NSRange(location: 0, length: attributeString.length))
-        attributedText = attributeString
+        let lineHeight = fontStyle.lineHeight
+        print(lineHeight)
+        
+        if let text = text {
+            let style = NSMutableParagraphStyle()
+            style.maximumLineHeight = lineHeight
+            style.minimumLineHeight = lineHeight
+            
+            let attributes: [NSAttributedString.Key: Any] = [
+                .paragraphStyle: style,
+                .baselineOffset: (lineHeight - font.lineHeight) / 4
+            ]
+            
+            let attrString = NSAttributedString(string: text,
+                                                attributes: attributes)
+            self.attributedText = attrString
+        }
     }
 }
