@@ -20,11 +20,11 @@ enum AlertType {
     var alertHeight: CGFloat {
         switch self {
         case .small:
-            return 164
+            return SizeLiterals.Screen.screenHeight * 164 / 667
         case .medium:
-            return 186
+            return SizeLiterals.Screen.screenHeight * 186 / 667
         case .big:
-            return 194
+            return SizeLiterals.Screen.screenHeight * 194 / 667
         }
     }
 }
@@ -167,25 +167,27 @@ private extension CustomAlertView {
         }
         
         alertTitleLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(32)
+            $0.top.equalToSuperview().inset(SizeLiterals.Screen.screenHeight * 32 / 667)
             $0.centerX.equalToSuperview()
         }
         
         alertSubTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(alertTitleLabel.snp.bottom).offset(8)
+            $0.top.equalTo(alertTitleLabel.snp.bottom).offset(SizeLiterals.Screen.screenHeight * 8 / 667)
             $0.centerX.equalToSuperview()
         }
         
         leftButton.snp.makeConstraints {
-            $0.leading.bottom.equalToSuperview().inset(22)
+            $0.leading.equalToSuperview().inset(22)
+            $0.bottom.equalToSuperview().inset(SizeLiterals.Screen.screenHeight * 22 / 667)
             $0.width.equalTo((SizeLiterals.Screen.screenWidth - 117) / 2)
-            $0.height.equalTo(44)
+            $0.height.equalTo(SizeLiterals.Screen.screenHeight * 44 / 667)
         }
         
         rightButton.snp.makeConstraints {
-            $0.trailing.bottom.equalToSuperview().inset(22)
+            $0.trailing.equalToSuperview().inset(22)
+            $0.bottom.equalToSuperview().inset(SizeLiterals.Screen.screenHeight * 22 / 667)
             $0.width.equalTo((SizeLiterals.Screen.screenWidth - 117) / 2)
-            $0.height.equalTo(44)
+            $0.height.equalTo(SizeLiterals.Screen.screenHeight * 44 / 667)
         }
     }
     

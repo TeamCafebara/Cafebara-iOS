@@ -111,6 +111,7 @@ private extension CustomNavigationView {
         titleLabel.do {
             $0.textColor = .gray7
             $0.font = .fontBara(.title1)
+            $0.asLineHeight(.title1)
         }
         
         backButton.do {
