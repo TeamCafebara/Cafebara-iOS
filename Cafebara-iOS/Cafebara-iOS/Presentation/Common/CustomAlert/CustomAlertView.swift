@@ -177,16 +177,18 @@ private extension CustomAlertView {
         
         leftButton.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(22)
-            $0.bottom.equalToSuperview().inset(SizeLiterals.Screen.screenHeight * 22 / 667)
-            $0.width.equalTo((SizeLiterals.Screen.screenWidth - 117) / 2)
-            $0.height.equalTo(SizeLiterals.Screen.screenHeight * 44 / 667)
         }
         
         rightButton.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(22)
-            $0.bottom.equalToSuperview().inset(SizeLiterals.Screen.screenHeight * 22 / 667)
-            $0.width.equalTo((SizeLiterals.Screen.screenWidth - 117) / 2)
-            $0.height.equalTo(SizeLiterals.Screen.screenHeight * 44 / 667)
+        }
+        
+        [leftButton, rightButton].forEach {
+            $0.snp.makeConstraints {
+                $0.bottom.equalToSuperview().inset(SizeLiterals.Screen.screenHeight * 22 / 667)
+                $0.width.equalTo((SizeLiterals.Screen.screenWidth - 117) / 2)
+                $0.height.equalTo(SizeLiterals.Screen.screenHeight * 44 / 667)
+            }
         }
     }
     
