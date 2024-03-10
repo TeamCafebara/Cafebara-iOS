@@ -30,7 +30,6 @@ enum AlertType {
 }
 
 protocol AlertTappedDelegate: AnyObject {
-    
     func leftButtonTapped()
     func rightButtonTapped()
 }
