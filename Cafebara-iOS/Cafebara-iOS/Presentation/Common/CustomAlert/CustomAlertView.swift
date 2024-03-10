@@ -104,9 +104,9 @@ private extension CustomAlertView {
             $0.textAlignment = .center
         }
         
-        if title.contains("대타") {
+        if title.contains(I18N.Common.alertContainTitle) {
             leftButton.do {
-                $0.setTitle("취소할게요", for: .normal)
+                $0.setTitle(I18N.Common.alertLeftTitle2, for: .normal)
                 $0.setTitleColor(.gray4, for: .normal)
                 $0.titleLabel?.font = UIFont.fontBara(.body3)
                 $0.titleLabel?.asLineHeight(.body3)
@@ -114,7 +114,7 @@ private extension CustomAlertView {
                 $0.makeRoundBorder(cornerRadius: 4, borderWidth: 1, borderColor: .gray2)
             }
             rightButton.do {
-                $0.setTitle("보낼게요", for: .normal)
+                $0.setTitle(I18N.Common.alertRightTitle2, for: .normal)
                 $0.setTitleColor(.whiteBara, for: .normal)
                 $0.titleLabel?.font = UIFont.fontBara(.body3)
                 $0.titleLabel?.asLineHeight(.body3)
@@ -122,13 +122,13 @@ private extension CustomAlertView {
                 $0.makeRoundBorder(cornerRadius: 4, borderWidth: 0, borderColor: .clear)
             }
             
-            if let range = title.range(of: " 님") {
+            if let range = title.range(of: I18N.Common.alertName) {
                 let name = title[title.startIndex..<range.lowerBound]
                 alertTitleLabel.asColor(targetString: String(name), color: .blueBara)
             }
         } else {
             leftButton.do {
-                $0.setTitle("할래요", for: .normal)
+                $0.setTitle(I18N.Common.alertLeftTitle, for: .normal)
                 $0.setTitleColor(.gray4, for: .normal)
                 $0.titleLabel?.font = UIFont.fontBara(.body3)
                 $0.titleLabel?.asLineHeight(.body3)
@@ -136,7 +136,7 @@ private extension CustomAlertView {
                 $0.makeRoundBorder(cornerRadius: 4, borderWidth: 1, borderColor: .gray2)
             }
             rightButton.do {
-                $0.setTitle("안할래요", for: .normal)
+                $0.setTitle(I18N.Common.alertRightTitle, for: .normal)
                 $0.setTitleColor(.whiteBara, for: .normal)
                 $0.titleLabel?.font = UIFont.fontBara(.body3)
                 $0.titleLabel?.asLineHeight(.body3)
