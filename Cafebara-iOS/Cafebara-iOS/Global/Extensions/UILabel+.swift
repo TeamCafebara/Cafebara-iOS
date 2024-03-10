@@ -39,7 +39,6 @@ extension UILabel {
     func asLineHeight(_ fontStyle: FontLevel) {
         
         let lineHeight = fontStyle.lineHeight
-        print(lineHeight)
         
         if let text = text {
             let style = NSMutableParagraphStyle()
