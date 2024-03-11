@@ -1,14 +1,11 @@
 //
-//  CustomTabBar.swift
+//  TabBarItem.swift
 //  Cafebara-iOS
 //
 //  Created by Gahyun Kim on 2024/03/11.
 //
 
 import UIKit
-
-import SnapKit
-import Then
 
 enum TabBarItem: CaseIterable {
     
@@ -18,15 +15,15 @@ enum TabBarItem: CaseIterable {
     var normalItem: UIImage? {
         switch self {
         case .home:
-            return UIImage(resource: .icHomeInactive)
+            return .icHomeInactive
         case .todo:
-            return UIImage(resource: .icTodoInactive)
+            return .icTodoInactive
         case .schedule:
-            return UIImage(resource: .icCalenderInactive)
+            return .icCalenderInactive
         case .work:
-            return UIImage(resource: .icWorkInactive)
+            return .icWorkInactive
         case .mypage:
-            return UIImage(resource: .icMypageInactive)
+            return .icMypageInactive
         }
     }
     
@@ -34,15 +31,15 @@ enum TabBarItem: CaseIterable {
     var selectedItem: UIImage? {
         switch self {
         case .home:
-            return UIImage(resource: .icHomeInactive)
+            return .icHomeActive
         case .todo:
-            return UIImage(resource: .icTodoInactive)
+            return .icTodoActive
         case .schedule:
-            return UIImage(resource: .icCalenderInactive)
+            return .icCalenderActive
         case .work:
-            return UIImage(resource: .icWorkInactive)
+            return .icWorkActive
         case .mypage:
-            return UIImage(resource: .icMypageInactive)
+            return .icMypageActive
         }
     }
     
@@ -61,10 +58,10 @@ enum TabBarItem: CaseIterable {
     var targetViewController: UIViewController {
         switch self {
         case .home: return ViewController()
-        case .todo: return ViewController() //TodoViewController()
-        case .schedule: return ViewController() //ScheduleViewController()
-        case .work: return ViewController() //WorkViewController()
-        case .mypage: return ViewController() //MyPageViewController()
+        case .todo: return ViewController() // TodoViewController()
+        case .schedule: return ViewController() // ScheduleViewController()
+        case .work: return ViewController() // WorkViewController()
+        case .mypage: return ViewController() // MyPageViewController()
         }
     }
 }
