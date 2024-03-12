@@ -7,7 +7,15 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
+
 final class RoleChoiceViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    private let onboardingViewModel = OnboardingRegisterViewModel()
+    private let disposeBag = DisposeBag()
     
     // MARK: - UI Components
     
@@ -37,15 +45,20 @@ final class RoleChoiceViewController: UIViewController {
 extension RoleChoiceViewController {
 
     func setUI() {
-        self.navigationController?.navigationBar.isHidden = true
-        
         roleChoiceView.navigationBar.backButtonAction = {
             self.navigationController?.popViewController(animated: false)
         }
     }
 
     func bindViewModel() {
-        
+        roleChoiceView.nextButton.rx.tap
+            .bind {
+                self.onboardingViewModel.saveRole(isOwner: self.roleChoiceView.isOwnerSelected ? true : false)
+                
+                let nav = NameInputViewController(viewModel: self.onboardingViewModel)
+                self.navigationController?.pushViewController(nav, animated: true)
+            }
+            .disposed(by: disposeBag)
     }
     
     func setHierarchy() {
