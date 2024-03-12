@@ -27,6 +27,9 @@
 		833DC8132B8750EA0096703B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DC8122B8750EA0096703B /* HomeViewModel.swift */; };
 		833DC8152B8750F30096703B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DC8142B8750F30096703B /* HomeView.swift */; };
 		833DC8172B8751150096703B /* a.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DC8162B8751150096703B /* a.swift */; };
+		A41289DF2B9F72FE00E3462D /* RoleChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289DE2B9F72FE00E3462D /* RoleChoiceView.swift */; };
+		A41289E32B9F731300E3462D /* RoleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289E22B9F731300E3462D /* RoleChoiceViewController.swift */; };
+		A41289E52BA0490B00E3462D /* OnboardingRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289E42BA0490B00E3462D /* OnboardingRegisterViewModel.swift */; };
 		A43C73E82B8F31C900B39F21 /* SUIT-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E42B8F31C900B39F21 /* SUIT-SemiBold.ttf */; };
 		A43C73E92B8F31C900B39F21 /* SUIT-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E52B8F31C900B39F21 /* SUIT-Medium.ttf */; };
 		A43C73EA2B8F31C900B39F21 /* SUIT-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E62B8F31C900B39F21 /* SUIT-Bold.ttf */; };
@@ -77,6 +80,9 @@
 		833DC8122B8750EA0096703B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		833DC8142B8750F30096703B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		833DC8162B8751150096703B /* a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a.swift; sourceTree = "<group>"; };
+		A41289DE2B9F72FE00E3462D /* RoleChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleChoiceView.swift; sourceTree = "<group>"; };
+		A41289E22B9F731300E3462D /* RoleChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleChoiceViewController.swift; sourceTree = "<group>"; };
+		A41289E42BA0490B00E3462D /* OnboardingRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRegisterViewModel.swift; sourceTree = "<group>"; };
 		A43C73E42B8F31C900B39F21 /* SUIT-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-SemiBold.ttf"; sourceTree = "<group>"; };
 		A43C73E52B8F31C900B39F21 /* SUIT-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Medium.ttf"; sourceTree = "<group>"; };
 		A43C73E62B8F31C900B39F21 /* SUIT-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Bold.ttf"; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 			children = (
 				A488FB432B9AFAD5004D4A09 /* Common */,
 				833DC8092B8750120096703B /* Home */,
+				A41289D92B9F729500E3462D /* Onboarding */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -265,6 +272,48 @@
 				833A6AF42B873317001370CD /* ViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A41289D92B9F729500E3462D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A41289DA2B9F72B500E3462D /* RoleChoiceScene */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		A41289DA2B9F72B500E3462D /* RoleChoiceScene */ = {
+			isa = PBXGroup;
+			children = (
+				A41289DD2B9F72E300E3462D /* View */,
+				A41289DC2B9F72DC00E3462D /* ViewModel */,
+				A41289DB2B9F72D700E3462D /* ViewController */,
+			);
+			path = RoleChoiceScene;
+			sourceTree = "<group>";
+		};
+		A41289DB2B9F72D700E3462D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A41289E22B9F731300E3462D /* RoleChoiceViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A41289DC2B9F72DC00E3462D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A41289E42BA0490B00E3462D /* OnboardingRegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A41289DD2B9F72E300E3462D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A41289DE2B9F72FE00E3462D /* RoleChoiceView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A43C73E22B8F30BD00B39F21 /* Network */ = {
@@ -506,7 +555,9 @@
 				A488FBAB2B9B81AB004D4A09 /* CustomToastMessage.swift in Sources */,
 				833DC8132B8750EA0096703B /* HomeViewModel.swift in Sources */,
 				830471582B87BA52005AEEB4 /* UILabel+.swift in Sources */,
+				A41289DF2B9F72FE00E3462D /* RoleChoiceView.swift in Sources */,
 				833DC7FC2B874CE50096703B /* StringLiterals.swift in Sources */,
+				A41289E32B9F731300E3462D /* RoleChoiceViewController.swift in Sources */,
 				8304715A2B87BBC2005AEEB4 /* UIButton+.swift in Sources */,
 				833DC8042B874D5C0096703B /* UITableViewRegisterable.swift in Sources */,
 				A43C73FA2B90516C00B39F21 /* APIConstant.swift in Sources */,
@@ -521,6 +572,7 @@
 				833DC8172B8751150096703B /* a.swift in Sources */,
 				830471562B87BA0E005AEEB4 /* UIStackView+.swift in Sources */,
 				A488FB542B9B10FB004D4A09 /* CustomAlertView.swift in Sources */,
+				A41289E52BA0490B00E3462D /* OnboardingRegisterViewModel.swift in Sources */,
 				A43C74032B90525F00B39F21 /* HomeTarget.swift in Sources */,
 				833DC8152B8750F30096703B /* HomeView.swift in Sources */,
 				A43C73FC2B90517200B39F21 /* URLConstant.swift in Sources */,
