@@ -30,6 +30,9 @@
 		A41289DF2B9F72FE00E3462D /* RoleChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289DE2B9F72FE00E3462D /* RoleChoiceView.swift */; };
 		A41289E32B9F731300E3462D /* RoleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289E22B9F731300E3462D /* RoleChoiceViewController.swift */; };
 		A41289E52BA0490B00E3462D /* OnboardingRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289E42BA0490B00E3462D /* OnboardingRegisterViewModel.swift */; };
+		A41289EA2BA04B9D00E3462D /* NameInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289E92BA04B9D00E3462D /* NameInputViewController.swift */; };
+		A41289EC2BA04BA600E3462D /* NameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289EB2BA04BA600E3462D /* NameInputView.swift */; };
+		A41289EF2BA04CC100E3462D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289EE2BA04CC100E3462D /* CustomTextField.swift */; };
 		A43C73E82B8F31C900B39F21 /* SUIT-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E42B8F31C900B39F21 /* SUIT-SemiBold.ttf */; };
 		A43C73E92B8F31C900B39F21 /* SUIT-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E52B8F31C900B39F21 /* SUIT-Medium.ttf */; };
 		A43C73EA2B8F31C900B39F21 /* SUIT-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E62B8F31C900B39F21 /* SUIT-Bold.ttf */; };
@@ -83,6 +86,9 @@
 		A41289DE2B9F72FE00E3462D /* RoleChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleChoiceView.swift; sourceTree = "<group>"; };
 		A41289E22B9F731300E3462D /* RoleChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleChoiceViewController.swift; sourceTree = "<group>"; };
 		A41289E42BA0490B00E3462D /* OnboardingRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRegisterViewModel.swift; sourceTree = "<group>"; };
+		A41289E92BA04B9D00E3462D /* NameInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputViewController.swift; sourceTree = "<group>"; };
+		A41289EB2BA04BA600E3462D /* NameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputView.swift; sourceTree = "<group>"; };
+		A41289EE2BA04CC100E3462D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		A43C73E42B8F31C900B39F21 /* SUIT-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-SemiBold.ttf"; sourceTree = "<group>"; };
 		A43C73E52B8F31C900B39F21 /* SUIT-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Medium.ttf"; sourceTree = "<group>"; };
 		A43C73E62B8F31C900B39F21 /* SUIT-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Bold.ttf"; sourceTree = "<group>"; };
@@ -278,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				A41289DA2B9F72B500E3462D /* RoleChoiceScene */,
+				A41289E62BA04B5600E3462D /* NameInputScene */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -314,6 +321,39 @@
 				A41289DE2B9F72FE00E3462D /* RoleChoiceView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A41289E62BA04B5600E3462D /* NameInputScene */ = {
+			isa = PBXGroup;
+			children = (
+				A41289E82BA04B8E00E3462D /* View */,
+				A41289E72BA04B8700E3462D /* ViewController */,
+			);
+			path = NameInputScene;
+			sourceTree = "<group>";
+		};
+		A41289E72BA04B8700E3462D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A41289E92BA04B9D00E3462D /* NameInputViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A41289E82BA04B8E00E3462D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A41289EB2BA04BA600E3462D /* NameInputView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A41289ED2BA04CB400E3462D /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				A41289EE2BA04CC100E3462D /* CustomTextField.swift */,
+			);
+			path = CustomTextField;
 			sourceTree = "<group>";
 		};
 		A43C73E22B8F30BD00B39F21 /* Network */ = {
@@ -393,6 +433,7 @@
 		A488FB432B9AFAD5004D4A09 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A41289ED2BA04CB400E3462D /* CustomTextField */,
 				A488FBA92B9B8194004D4A09 /* CustomToastMessage */,
 				A488FBA62B9B6B7D004D4A09 /* CustomButton */,
 				A488FB442B9AFADD004D4A09 /* CustomNavigation */,
@@ -555,12 +596,14 @@
 				A488FBAB2B9B81AB004D4A09 /* CustomToastMessage.swift in Sources */,
 				833DC8132B8750EA0096703B /* HomeViewModel.swift in Sources */,
 				830471582B87BA52005AEEB4 /* UILabel+.swift in Sources */,
+				A41289EF2BA04CC100E3462D /* CustomTextField.swift in Sources */,
 				A41289DF2B9F72FE00E3462D /* RoleChoiceView.swift in Sources */,
 				833DC7FC2B874CE50096703B /* StringLiterals.swift in Sources */,
 				A41289E32B9F731300E3462D /* RoleChoiceViewController.swift in Sources */,
 				8304715A2B87BBC2005AEEB4 /* UIButton+.swift in Sources */,
 				833DC8042B874D5C0096703B /* UITableViewRegisterable.swift in Sources */,
 				A43C73FA2B90516C00B39F21 /* APIConstant.swift in Sources */,
+				A41289EA2BA04B9D00E3462D /* NameInputViewController.swift in Sources */,
 				833DC8012B874D250096703B /* UIView+.swift in Sources */,
 				8304715E2B87BD22005AEEB4 /* UIImageView+.swift in Sources */,
 				833DC7FE2B874CED0096703B /* SizeLiterals.swift in Sources */,
@@ -573,6 +616,7 @@
 				830471562B87BA0E005AEEB4 /* UIStackView+.swift in Sources */,
 				A488FB542B9B10FB004D4A09 /* CustomAlertView.swift in Sources */,
 				A41289E52BA0490B00E3462D /* OnboardingRegisterViewModel.swift in Sources */,
+				A41289EC2BA04BA600E3462D /* NameInputView.swift in Sources */,
 				A43C74032B90525F00B39F21 /* HomeTarget.swift in Sources */,
 				833DC8152B8750F30096703B /* HomeView.swift in Sources */,
 				A43C73FC2B90517200B39F21 /* URLConstant.swift in Sources */,

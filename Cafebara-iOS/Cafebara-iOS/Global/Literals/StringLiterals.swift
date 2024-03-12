@@ -21,7 +21,11 @@ enum I18N {
     
     enum OnboardingRegister {
         static let roleChoiceTitle = "안녕하세요!\n카페바라 시작 전 선택해 주세요"
-        static let ownerTitle = "사장이에요"
-        static let staffTitle = "직원이에요"
+        static let roleChoiceOwnerTitle = "사장이에요"
+        static let roleChoiceStaffTitle = "직원이에요"
+        static let nameInputOwnerTitle = "반가워요 사장님!\n사장님의 성함을 알려주세요"
+        static let nameInputStaffTitle = "안녕하세요!\n다음으로 이름도 알려주세요"
+        static let nameInputOwnerPlaceholer = "사장님의 성함을 입력해 주세요!"
+        static let nameInputStaffPlaceholer = "실제 이름으로 입력해 주세요!"
     }
 }
