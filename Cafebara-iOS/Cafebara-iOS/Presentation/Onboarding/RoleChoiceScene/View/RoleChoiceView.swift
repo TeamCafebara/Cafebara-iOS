@@ -77,11 +77,11 @@ private extension RoleChoiceView {
         })
         
         ownerTitle.do {
-            $0.text = I18N.OnboardingRegister.ownerTitle
+            $0.text = I18N.OnboardingRegister.roleChoiceOwnerTitle
         }
         
         staffTitle.do {
-            $0.text = I18N.OnboardingRegister.staffTitle
+            $0.text = I18N.OnboardingRegister.roleChoiceStaffTitle
         }
         
         [ownerStackView, staffStackView].forEach({
@@ -145,7 +145,7 @@ private extension RoleChoiceView {
         })
         
         nextButton.snp.makeConstraints {
-            $0.bottom.equalTo(safeAreaLayoutGuide)
+            $0.bottom.equalTo(safeAreaLayoutGuide).offset(-14)
             $0.centerX.equalToSuperview()
         }
     }
