@@ -15,6 +15,7 @@ import Then
 final class TabBarController: UITabBarController {
     
     var customTabBar = CustomTabBar()
+    var borderView = UIView()
     
     // MARK: - Life Cycle
     
@@ -24,6 +25,25 @@ final class TabBarController: UITabBarController {
         
         setupStyle()
         addTabBarController()
+        setupBorderView()
+    }
+    
+    // MARK: - BorderView
+    
+    private func setupBorderView() {
+        borderView.backgroundColor = .gray1
+        view.addSubview(borderView)
+        
+        let borderHeight: CGFloat = 1.0
+        let tabBarHeight = tabBar.frame.height
+        borderView.frame = CGRect(x: 0, y: 0, width: tabBar.frame.width, height: borderHeight)
+        borderView.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
+        
+        borderView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.top.equalTo(tabBar.snp.top)
+            $0.height.equalTo(borderHeight)
+        }
     }
 }
 
