@@ -52,6 +52,10 @@
 		A488FBA52B9B616B004D4A09 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A488FBA42B9B616B004D4A09 /* FSCalendar */; };
 		A488FBA82B9B6B8E004D4A09 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488FBA72B9B6B8E004D4A09 /* CustomButton.swift */; };
 		A488FBAB2B9B81AB004D4A09 /* CustomToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488FBAA2B9B81AB004D4A09 /* CustomToastMessage.swift */; };
+		F113CB492BA2EFCD00FA6D71 /* MyWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB482BA2EFCD00FA6D71 /* MyWorkViewController.swift */; };
+		F113CB4B2BA2F2F600FA6D71 /* MyWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */; };
+		F113CB4D2BA308C800FA6D71 /* MyWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4C2BA308C800FA6D71 /* MyWorkViewModel.swift */; };
+		F113CB502BA31AEC00FA6D71 /* CustomPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4F2BA31AEC00FA6D71 /* CustomPaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +98,10 @@
 		A488FB532B9B10FB004D4A09 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		A488FBA72B9B6B8E004D4A09 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A488FBAA2B9B81AB004D4A09 /* CustomToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToastMessage.swift; sourceTree = "<group>"; };
+		F113CB482BA2EFCD00FA6D71 /* MyWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkViewController.swift; sourceTree = "<group>"; };
+		F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkView.swift; sourceTree = "<group>"; };
+		F113CB4C2BA308C800FA6D71 /* MyWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkViewModel.swift; sourceTree = "<group>"; };
+		F113CB4F2BA31AEC00FA6D71 /* CustomPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				833DC80A2B87506D0096703B /* HomeScene */,
+				F113CB432BA2EF3E00FA6D71 /* MyWorkScene */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -348,6 +357,7 @@
 				A488FBA62B9B6B7D004D4A09 /* CustomButton */,
 				A488FB442B9AFADD004D4A09 /* CustomNavigation */,
 				A488FB522B9B10DE004D4A09 /* CustomAlert */,
+				F113CB4E2BA31ABE00FA6D71 /* CustomLabel */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -382,6 +392,48 @@
 				A488FBAA2B9B81AB004D4A09 /* CustomToastMessage.swift */,
 			);
 			path = CustomToastMessage;
+			sourceTree = "<group>";
+		};
+		F113CB432BA2EF3E00FA6D71 /* MyWorkScene */ = {
+			isa = PBXGroup;
+			children = (
+				F113CB452BA2EF9F00FA6D71 /* ViewController */,
+				F113CB472BA2EFBB00FA6D71 /* ViewModel */,
+				F113CB462BA2EFA700FA6D71 /* View */,
+			);
+			path = MyWorkScene;
+			sourceTree = "<group>";
+		};
+		F113CB452BA2EF9F00FA6D71 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F113CB482BA2EFCD00FA6D71 /* MyWorkViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F113CB462BA2EFA700FA6D71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F113CB472BA2EFBB00FA6D71 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F113CB4C2BA308C800FA6D71 /* MyWorkViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F113CB4E2BA31ABE00FA6D71 /* CustomLabel */ = {
+			isa = PBXGroup;
+			children = (
+				F113CB4F2BA31AEC00FA6D71 /* CustomPaddingLabel.swift */,
+			);
+			path = CustomLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,10 +557,13 @@
 				A488FB462B9AFAF4004D4A09 /* CustomNavigationView.swift in Sources */,
 				A488FBAB2B9B81AB004D4A09 /* CustomToastMessage.swift in Sources */,
 				833DC8132B8750EA0096703B /* HomeViewModel.swift in Sources */,
+				F113CB502BA31AEC00FA6D71 /* CustomPaddingLabel.swift in Sources */,
 				830471582B87BA52005AEEB4 /* UILabel+.swift in Sources */,
 				833DC7FC2B874CE50096703B /* StringLiterals.swift in Sources */,
 				8304715A2B87BBC2005AEEB4 /* UIButton+.swift in Sources */,
+				F113CB4D2BA308C800FA6D71 /* MyWorkViewModel.swift in Sources */,
 				833DC8042B874D5C0096703B /* UITableViewRegisterable.swift in Sources */,
+				F113CB4B2BA2F2F600FA6D71 /* MyWorkView.swift in Sources */,
 				A43C73FA2B90516C00B39F21 /* APIConstant.swift in Sources */,
 				833DC8012B874D250096703B /* UIView+.swift in Sources */,
 				8304715E2B87BD22005AEEB4 /* UIImageView+.swift in Sources */,
@@ -528,6 +583,7 @@
 				8304715C2B87BBEB005AEEB4 /* UITextField+.swift in Sources */,
 				A43C73F42B90513900B39F21 /* Config.swift in Sources */,
 				A43C73F82B90515D00B39F21 /* NetworkLoggerPlugin.swift in Sources */,
+				F113CB492BA2EFCD00FA6D71 /* MyWorkViewController.swift in Sources */,
 				833A6AF32B873317001370CD /* SceneDelegate.swift in Sources */,
 				830471542B87B9E2005AEEB4 /* UIColor+.swift in Sources */,
 			);
