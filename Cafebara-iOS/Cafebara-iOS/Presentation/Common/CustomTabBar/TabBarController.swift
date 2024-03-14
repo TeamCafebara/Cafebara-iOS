@@ -27,24 +27,6 @@ final class TabBarController: UITabBarController {
         addTabBarController()
         setupBorderView()
     }
-    
-    // MARK: - BorderView
-    
-    private func setupBorderView() {
-        borderView.backgroundColor = .gray1
-        view.addSubview(borderView)
-        
-        let borderHeight: CGFloat = 1.0
-        let tabBarHeight = tabBar.frame.height
-        borderView.frame = CGRect(x: 0, y: 0, width: tabBar.frame.width, height: borderHeight)
-        borderView.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
-        
-        borderView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(tabBar.snp.top)
-            $0.height.equalTo(borderHeight)
-        }
-    }
 }
 
 // MARK: - Private Extensions
@@ -104,6 +86,34 @@ private extension TabBarController {
         currentViewController.tabBarItem = tabbarItem
         
         return currentViewController
+    }
+    
+    // Border View
+    
+    func setupBorderView() {
+        setBorderViewUI()
+        setBorderViewHierarchy()
+        setBorderViewLayout()
+    }
+    
+    func setBorderViewUI() {
+        borderView.backgroundColor = .gray1
+    }
+    
+    func setBorderViewHierarchy() {
+        view.addSubview(borderView)
+    }
+    
+    func setBorderViewLayout() {
+        let borderHeight: CGFloat = 1.0
+        borderView.frame = CGRect(x: 0, y: 0, width: tabBar.frame.width, height: borderHeight)
+        borderView.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
+        
+        borderView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview()
+            $0.top.equalTo(tabBar.snp.top)
+            $0.height.equalTo(borderHeight)
+        }
     }
 }
 
