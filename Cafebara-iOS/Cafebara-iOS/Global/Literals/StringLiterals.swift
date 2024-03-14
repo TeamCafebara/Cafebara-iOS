@@ -16,5 +16,10 @@ enum I18N {
         static let alertRightTitle = "안할래요"
         static let alertLeftTitle2 = "취소할게요"
         static let alertRightTitle2 = "보낼게요"
+        static let tabBarhome = "홈"
+        static let tabBarToDo = "투두"
+        static let tabBarSchedule = "스케줄"
+        static let tabBarWork = "출퇴근"
+        static let tabBarMyPage = "마이페이지"
     }
 }
