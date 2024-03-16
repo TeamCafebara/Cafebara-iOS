@@ -118,7 +118,7 @@ private extension RoleChoiceView {
         
         [ownerView, staffView].forEach({
             $0.snp.makeConstraints {
-                $0.top.equalTo(roleChoiceTitle.snp.bottom).offset(38)
+                $0.top.equalTo(roleChoiceTitle.snp.bottom).offset(40)
                 $0.width.equalTo((SizeLiterals.Screen.screenWidth - 65) / 2)
                 $0.height.equalTo(155)
             }
