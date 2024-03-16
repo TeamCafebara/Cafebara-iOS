@@ -33,6 +33,8 @@
 		A41289EA2BA04B9D00E3462D /* NameInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289E92BA04B9D00E3462D /* NameInputViewController.swift */; };
 		A41289EC2BA04BA600E3462D /* NameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289EB2BA04BA600E3462D /* NameInputView.swift */; };
 		A41289EF2BA04CC100E3462D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289EE2BA04CC100E3462D /* CustomTextField.swift */; };
+		A43B22F62BA3392500E15CC3 /* InviteCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43B22F52BA3392500E15CC3 /* InviteCodeViewController.swift */; };
+		A43B22F82BA3393100E15CC3 /* InviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43B22F72BA3393100E15CC3 /* InviteCodeView.swift */; };
 		A43C73E82B8F31C900B39F21 /* SUIT-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E42B8F31C900B39F21 /* SUIT-SemiBold.ttf */; };
 		A43C73E92B8F31C900B39F21 /* SUIT-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E52B8F31C900B39F21 /* SUIT-Medium.ttf */; };
 		A43C73EA2B8F31C900B39F21 /* SUIT-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E62B8F31C900B39F21 /* SUIT-Bold.ttf */; };
@@ -89,6 +91,9 @@
 		A41289E92BA04B9D00E3462D /* NameInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputViewController.swift; sourceTree = "<group>"; };
 		A41289EB2BA04BA600E3462D /* NameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInputView.swift; sourceTree = "<group>"; };
 		A41289EE2BA04CC100E3462D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		A43B22F02BA3022C00E15CC3 /* Cafebara-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cafebara-iOS.entitlements"; sourceTree = "<group>"; };
+		A43B22F52BA3392500E15CC3 /* InviteCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCodeViewController.swift; sourceTree = "<group>"; };
+		A43B22F72BA3393100E15CC3 /* InviteCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCodeView.swift; sourceTree = "<group>"; };
 		A43C73E42B8F31C900B39F21 /* SUIT-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-SemiBold.ttf"; sourceTree = "<group>"; };
 		A43C73E52B8F31C900B39F21 /* SUIT-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Medium.ttf"; sourceTree = "<group>"; };
 		A43C73E62B8F31C900B39F21 /* SUIT-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Bold.ttf"; sourceTree = "<group>"; };
@@ -147,6 +152,7 @@
 		833A6AEF2B873317001370CD /* Cafebara-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A43B22F02BA3022C00E15CC3 /* Cafebara-iOS.entitlements */,
 				833DC7F52B874C340096703B /* Application */,
 				833DC7F42B874C2B0096703B /* Global */,
 				A43C73E22B8F30BD00B39F21 /* Network */,
@@ -283,6 +289,7 @@
 		A41289D92B9F729500E3462D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				A43B22F12BA338E100E15CC3 /* InviteCodeScene */,
 				A41289DA2B9F72B500E3462D /* RoleChoiceScene */,
 				A41289E62BA04B5600E3462D /* NameInputScene */,
 			);
@@ -354,6 +361,31 @@
 				A41289EE2BA04CC100E3462D /* CustomTextField.swift */,
 			);
 			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		A43B22F12BA338E100E15CC3 /* InviteCodeScene */ = {
+			isa = PBXGroup;
+			children = (
+				A43B22F42BA3390100E15CC3 /* View */,
+				A43B22F22BA338F500E15CC3 /* ViewController */,
+			);
+			path = InviteCodeScene;
+			sourceTree = "<group>";
+		};
+		A43B22F22BA338F500E15CC3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A43B22F52BA3392500E15CC3 /* InviteCodeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A43B22F42BA3390100E15CC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A43B22F72BA3393100E15CC3 /* InviteCodeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A43C73E22B8F30BD00B39F21 /* Network */ = {
@@ -595,6 +627,7 @@
 				A488FB462B9AFAF4004D4A09 /* CustomNavigationView.swift in Sources */,
 				A488FBAB2B9B81AB004D4A09 /* CustomToastMessage.swift in Sources */,
 				833DC8132B8750EA0096703B /* HomeViewModel.swift in Sources */,
+				A43B22F62BA3392500E15CC3 /* InviteCodeViewController.swift in Sources */,
 				830471582B87BA52005AEEB4 /* UILabel+.swift in Sources */,
 				A41289EF2BA04CC100E3462D /* CustomTextField.swift in Sources */,
 				A41289DF2B9F72FE00E3462D /* RoleChoiceView.swift in Sources */,
@@ -611,6 +644,7 @@
 				A43C74062B90527000B39F21 /* HomeAPI.swift in Sources */,
 				A488FBA82B9B6B8E004D4A09 /* CustomButton.swift in Sources */,
 				833A6AF12B873317001370CD /* AppDelegate.swift in Sources */,
+				A43B22F82BA3393100E15CC3 /* InviteCodeView.swift in Sources */,
 				833DC8082B874DD90096703B /* UICollectionViewRegisterable.swift in Sources */,
 				833DC8172B8751150096703B /* a.swift in Sources */,
 				830471562B87BA0E005AEEB4 /* UIStackView+.swift in Sources */,
@@ -756,6 +790,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Cafebara-iOS/Cafebara-iOS.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -792,6 +827,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Cafebara-iOS/Cafebara-iOS.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
