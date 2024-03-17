@@ -17,6 +17,11 @@ enum I18N {
         static let alertLeftTitle2 = "취소할게요"
         static let alertRightTitle2 = "보낼게요"
         static let nextButtonTitle = "다음으로"
+        static let tabBarhome = "홈"
+        static let tabBarToDo = "투두"
+        static let tabBarSchedule = "스케줄"
+        static let tabBarWork = "출퇴근"
+        static let tabBarMyPage = "마이페이지"
     }
     
     enum OnboardingRegister {

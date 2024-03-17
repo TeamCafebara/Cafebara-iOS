@@ -27,6 +27,8 @@
 		833DC8132B8750EA0096703B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DC8122B8750EA0096703B /* HomeViewModel.swift */; };
 		833DC8152B8750F30096703B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DC8142B8750F30096703B /* HomeView.swift */; };
 		833DC8172B8751150096703B /* a.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DC8162B8751150096703B /* a.swift */; };
+		83752E3E2B9F086D0060F047 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83752E3D2B9F086D0060F047 /* TabBarItem.swift */; };
+		83752E402B9F0E550060F047 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83752E3F2B9F0E550060F047 /* TabBarController.swift */; };
 		A41289DF2B9F72FE00E3462D /* RoleChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289DE2B9F72FE00E3462D /* RoleChoiceView.swift */; };
 		A41289E32B9F731300E3462D /* RoleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289E22B9F731300E3462D /* RoleChoiceViewController.swift */; };
 		A41289E52BA0490B00E3462D /* OnboardingRegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289E42BA0490B00E3462D /* OnboardingRegisterViewModel.swift */; };
@@ -85,6 +87,8 @@
 		833DC8122B8750EA0096703B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		833DC8142B8750F30096703B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		833DC8162B8751150096703B /* a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a.swift; sourceTree = "<group>"; };
+		83752E3D2B9F086D0060F047 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		83752E3F2B9F0E550060F047 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A41289DE2B9F72FE00E3462D /* RoleChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleChoiceView.swift; sourceTree = "<group>"; };
 		A41289E22B9F731300E3462D /* RoleChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleChoiceViewController.swift; sourceTree = "<group>"; };
 		A41289E42BA0490B00E3462D /* OnboardingRegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRegisterViewModel.swift; sourceTree = "<group>"; };
@@ -286,6 +290,15 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		83752E3A2B9EEE9F0060F047 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				83752E3D2B9F086D0060F047 /* TabBarItem.swift */,
+				83752E3F2B9F0E550060F047 /* TabBarController.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
 		A41289D92B9F729500E3462D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +478,7 @@
 		A488FB432B9AFAD5004D4A09 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				83752E3A2B9EEE9F0060F047 /* CustomTabBar */,
 				A41289ED2BA04CB400E3462D /* CustomTextField */,
 				A488FBA92B9B8194004D4A09 /* CustomToastMessage */,
 				A488FBA62B9B6B7D004D4A09 /* CustomButton */,
@@ -641,6 +655,7 @@
 				8304715E2B87BD22005AEEB4 /* UIImageView+.swift in Sources */,
 				833DC7FE2B874CED0096703B /* SizeLiterals.swift in Sources */,
 				833A6AF52B873317001370CD /* ViewController.swift in Sources */,
+				83752E3E2B9F086D0060F047 /* TabBarItem.swift in Sources */,
 				A43C74062B90527000B39F21 /* HomeAPI.swift in Sources */,
 				A488FBA82B9B6B8E004D4A09 /* CustomButton.swift in Sources */,
 				833A6AF12B873317001370CD /* AppDelegate.swift in Sources */,
@@ -648,6 +663,7 @@
 				833DC8082B874DD90096703B /* UICollectionViewRegisterable.swift in Sources */,
 				833DC8172B8751150096703B /* a.swift in Sources */,
 				830471562B87BA0E005AEEB4 /* UIStackView+.swift in Sources */,
+				83752E402B9F0E550060F047 /* TabBarController.swift in Sources */,
 				A488FB542B9B10FB004D4A09 /* CustomAlertView.swift in Sources */,
 				A41289E52BA0490B00E3462D /* OnboardingRegisterViewModel.swift in Sources */,
 				A41289EC2BA04BA600E3462D /* NameInputView.swift in Sources */,
