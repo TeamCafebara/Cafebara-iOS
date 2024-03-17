@@ -51,9 +51,11 @@ final class InviteCodeViewController: UIViewController {
 extension InviteCodeViewController {
 
     func setUI() {
-        self.inviteCodeView.navigationBar.backButtonAction = {
+        inviteCodeView.navigationBar.backButtonAction = {
             self.navigationController?.popViewController(animated: true)
         }
+        inviteCodeView.inviteCodeTitle.text = viewModel.isOwner ? I18N.OnboardingRegister.ownerInviteCodeTitle :  I18N.OnboardingRegister.staffInviteCodeTitle
+        inviteCodeView.setComponent(isOwner: viewModel.isOwner)
     }
 
     func bindViewModel() {

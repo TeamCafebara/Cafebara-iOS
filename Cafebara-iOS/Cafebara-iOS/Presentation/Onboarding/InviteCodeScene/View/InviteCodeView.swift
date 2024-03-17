@@ -15,11 +15,23 @@ final class InviteCodeView: UIView {
     // MARK: - UI Components
     
     let navigationBar = CustomNavigationView()
-    private let inviteCodeTitle = UILabel()
+    let inviteCodeTitle = UILabel()
     lazy var codeInputTextField = CustomTextField(placeHolder: I18N.OnboardingRegister.codeInputPlaceholder)
     let isCertifyLabel = UILabel()
     lazy var codeCertifyButton = CustomButton(status: false, type: .hasBorder, title: I18N.OnboardingRegister.codeCertifyButtonTitle)
     lazy var nextButton = CustomButton(status: false, type: .noBorder, title: I18N.Common.nextButtonTitle)
+    
+    private let ownerInviteCodeView = UIView()
+    let ownerInviteCodeLabel = UILabel()
+    let codePasteView = UIView()
+    private let codePasteStackView = UIStackView()
+    private let codePasteImage = UIImageView(image: .icCpoy)
+    private let codePasteTitle = UILabel()
+    let codeShareView = UIView()
+    private let codeShareStackView = UIStackView()
+    private let codeShareImage = UIImageView(image: .icShare)
+    private let codeShareTitle = UILabel()
+    private let codePasteToast = CustomToastMessage(title: I18N.OnboardingRegister.codePastToastTitle)
     
     // MARK: - Life Cycles
     
@@ -47,6 +59,7 @@ private extension InviteCodeView {
     func setUI() {
         backgroundColor = .backgroundBara
         isCertifyLabel.isHidden = true
+        codePasteToast.isHidden = true
     }
     
     func setStyle() {
@@ -55,7 +68,6 @@ private extension InviteCodeView {
         }
         
         inviteCodeTitle.do {
-            $0.text = I18N.OnboardingRegister.inviteCodeTitle
             $0.textColor = .gray7
             $0.textAlignment = .left
             $0.numberOfLines = 0
@@ -67,10 +79,53 @@ private extension InviteCodeView {
             $0.font = .fontBara(.caption1)
             $0.asLineHeight(.caption1)
         }
+        
+        ownerInviteCodeView.do {
+            $0.layer.cornerRadius = 10
+            $0.backgroundColor = .blue10
+        }
+        
+        ownerInviteCodeLabel.do {
+            $0.text = "CAFEBARA-240119"
+            $0.textColor = .gray8
+            $0.textAlignment = .center
+            $0.font = .fontBara(.title3)
+            $0.asLineHeight(.title3)
+        }
+        
+        [codePasteView, codeShareView].forEach({
+            $0.backgroundColor = .whiteBara
+            $0.setRoundBorder(borderColor: .gray5, borderWidth: 1, cornerRadius: 8)
+        })
+        
+        [codePasteStackView, codeShareStackView].forEach({
+            $0.axis = .horizontal
+            $0.spacing = 4
+            $0.alignment = .center
+        })
+        
+        codePasteTitle.do {
+            $0.text = I18N.OnboardingRegister.codePasteTitle
+        }
+        
+        codeShareTitle.do {
+            $0.text = I18N.OnboardingRegister.codeShareTitle
+        }
+        
+        [codePasteTitle, codeShareTitle].forEach({
+            $0.textColor = .gray5
+            $0.font = .fontBara(.body2)
+            $0.asLineHeight(.body2)
+        })
     }
     
     func setHierarchy() {
-        addSubviews(navigationBar, inviteCodeTitle, codeInputTextField, isCertifyLabel, codeCertifyButton, nextButton)
+        ownerInviteCodeView.addSubviews(ownerInviteCodeLabel)
+        codePasteStackView.addArrangedSubviews(codePasteImage, codePasteTitle)
+        codeShareStackView.addArrangedSubviews(codeShareImage, codeShareTitle)
+        codePasteView.addSubview(codePasteStackView)
+        codeShareView.addSubview(codeShareStackView)
+        addSubviews(navigationBar, inviteCodeTitle, codeInputTextField, isCertifyLabel, codeCertifyButton, ownerInviteCodeView, codePasteView, codeShareView, nextButton, codePasteToast)
     }
     
     func setLayout() {
@@ -85,7 +140,7 @@ private extension InviteCodeView {
         }
         
         codeInputTextField.snp.makeConstraints {
-            $0.top.equalTo(inviteCodeTitle.snp.bottom).offset(SizeLiterals.Screen.screenHeight * 33 / 667)
+            $0.top.equalTo(inviteCodeTitle.snp.bottom).offset(SizeLiterals.Screen.screenHeight * 40 / 667)
             $0.centerX.equalToSuperview()
         }
         
@@ -103,6 +158,50 @@ private extension InviteCodeView {
             $0.bottom.equalTo(safeAreaLayoutGuide).offset(-14)
             $0.centerX.equalToSuperview()
         }
+        
+        ownerInviteCodeView.snp.makeConstraints {
+            $0.top.equalTo(inviteCodeTitle.snp.bottom).offset(SizeLiterals.Screen.screenHeight * 40 / 667)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(SizeLiterals.Screen.screenWidth - 40)
+            $0.height.equalTo(SizeLiterals.Screen.screenHeight * 95 / 667)
+        }
+        
+        ownerInviteCodeLabel.snp.makeConstraints {
+            $0.center.equalToSuperview()
+        }
+        
+        [codePasteView, codeShareView].forEach({
+            $0.snp.makeConstraints {
+                $0.top.equalTo(ownerInviteCodeView.snp.bottom).offset(SizeLiterals.Screen.screenHeight * 18 / 667)
+                $0.width.equalTo((SizeLiterals.Screen.screenWidth - 55) / 2)
+                $0.height.equalTo(SizeLiterals.Screen.screenHeight * 52 / 667)
+            }
+        })
+        
+        codePasteView.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(20)
+        }
+        
+        codeShareView.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(20)
+        }
+        
+        [codePasteStackView, codeShareStackView].forEach({
+            $0.snp.makeConstraints {
+                $0.center.equalToSuperview()
+            }
+        })
+        
+        [codePasteImage, codeShareImage].forEach({
+            $0.snp.makeConstraints {
+                $0.size.equalTo(24)
+            }
+        })
+        
+        codePasteToast.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalTo(safeAreaLayoutGuide).offset(-SizeLiterals.Screen.screenHeight * 52 / 667)
+        }
     }
     
     func setDelegate() {
@@ -117,6 +216,31 @@ private extension InviteCodeView {
     @objc
     func dismissKeyboard() {
         self.endEditing(true)
+    }
+}
+
+extension InviteCodeView {
+    
+    func setComponent(isOwner: Bool) {
+        if isOwner {
+            codeInputTextField.isHidden = true
+            codeCertifyButton.isHidden = true
+            ownerInviteCodeView.isHidden = false
+            codePasteView.isHidden = false
+            codeShareView.isHidden = false
+            nextButton.isEnabled = true
+        } else {
+            codeInputTextField.isHidden = false
+            codeCertifyButton.isHidden = false
+            ownerInviteCodeView.isHidden = true
+            codePasteView.isHidden = true
+            codeShareView.isHidden = true
+            nextButton.isEnabled = false
+        }
+    }
+    
+    func configureOwnerInviteCode(code: String) {
+        ownerInviteCodeLabel.text = code
     }
 }
 

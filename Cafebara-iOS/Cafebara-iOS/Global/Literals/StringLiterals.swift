@@ -34,10 +34,14 @@ enum I18N {
         static let nameInputStaffPlaceholer = "실제 이름으로 입력해 주세요!"
         static let codeInputPlaceholder = "사장님께 공유 받은 초대코드를 입력해 주세요!"
         static let codeCertifyButtonTitle = "코드 인증"
-        static let inviteCodeTitle = "반가워요!\n초대코드를 입력해 주세요"
+        static let staffInviteCodeTitle = "반가워요!\n초대코드를 입력해 주세요"
+        static let ownerInviteCodeTitle = "아래 초대코드를 통해\n함께 일하는 분들과 함께 해요"
         static let isCertifyLabelSuccess = "코드 인증 성공!"
         static let isCertifyLabelFail = "코드 인증 실패!"
         static let storeInputOwnerTitle = "고마워요 사장님!\n사장님의 가게명을 알려주세요"
         static let storeInputPlaceholder = "사장님의 가게명을 최대 18글자로 입력해 주세요!"
+        static let codePastToastTitle = "초대코드가 복사되었어요"
+        static let codePasteTitle = "초대코드 복사"
+        static let codeShareTitle = "초대코드 공유"
     }
 }
