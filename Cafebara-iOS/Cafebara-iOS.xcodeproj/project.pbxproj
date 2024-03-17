@@ -368,14 +368,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A41289ED2BA04CB400E3462D /* CustomTextField */ = {
-			isa = PBXGroup;
-			children = (
-				A41289EE2BA04CC100E3462D /* CustomTextField.swift */,
-			);
-			path = CustomTextField;
-			sourceTree = "<group>";
-		};
 		A43B22F12BA338E100E15CC3 /* InviteCodeScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +391,18 @@
 				A43B22F72BA3393100E15CC3 /* InviteCodeView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A43B23282BA6A35100E15CC3 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				A488FB532B9B10FB004D4A09 /* CustomAlertView.swift */,
+				A488FB452B9AFAF4004D4A09 /* CustomNavigationView.swift */,
+				A488FBA72B9B6B8E004D4A09 /* CustomButton.swift */,
+				A488FBAA2B9B81AB004D4A09 /* CustomToastMessage.swift */,
+				A41289EE2BA04CC100E3462D /* CustomTextField.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		A43C73E22B8F30BD00B39F21 /* Network */ = {
@@ -478,46 +482,10 @@
 		A488FB432B9AFAD5004D4A09 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A43B23282BA6A35100E15CC3 /* UIComponents */,
 				83752E3A2B9EEE9F0060F047 /* CustomTabBar */,
-				A41289ED2BA04CB400E3462D /* CustomTextField */,
-				A488FBA92B9B8194004D4A09 /* CustomToastMessage */,
-				A488FBA62B9B6B7D004D4A09 /* CustomButton */,
-				A488FB442B9AFADD004D4A09 /* CustomNavigation */,
-				A488FB522B9B10DE004D4A09 /* CustomAlert */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		A488FB442B9AFADD004D4A09 /* CustomNavigation */ = {
-			isa = PBXGroup;
-			children = (
-				A488FB452B9AFAF4004D4A09 /* CustomNavigationView.swift */,
-			);
-			path = CustomNavigation;
-			sourceTree = "<group>";
-		};
-		A488FB522B9B10DE004D4A09 /* CustomAlert */ = {
-			isa = PBXGroup;
-			children = (
-				A488FB532B9B10FB004D4A09 /* CustomAlertView.swift */,
-			);
-			path = CustomAlert;
-			sourceTree = "<group>";
-		};
-		A488FBA62B9B6B7D004D4A09 /* CustomButton */ = {
-			isa = PBXGroup;
-			children = (
-				A488FBA72B9B6B8E004D4A09 /* CustomButton.swift */,
-			);
-			path = CustomButton;
-			sourceTree = "<group>";
-		};
-		A488FBA92B9B8194004D4A09 /* CustomToastMessage */ = {
-			isa = PBXGroup;
-			children = (
-				A488FBAA2B9B81AB004D4A09 /* CustomToastMessage.swift */,
-			);
-			path = CustomToastMessage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
