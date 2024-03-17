@@ -63,6 +63,8 @@ extension NameInputViewController {
                 if let nameText = self.nameInputview.nameInputTextField.text {
                     self.onboardingViewModel.inputs.saveName(name: nameText)
                 }
+                let nav = InviteCodeViewController(viewModel: self.onboardingViewModel)
+                self.navigationController?.pushViewController(nav, animated: true)
             }
             .disposed(by: disposeBag)
     }
