@@ -37,6 +37,9 @@
 		A41289EF2BA04CC100E3462D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41289EE2BA04CC100E3462D /* CustomTextField.swift */; };
 		A43B22F62BA3392500E15CC3 /* InviteCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43B22F52BA3392500E15CC3 /* InviteCodeViewController.swift */; };
 		A43B22F82BA3393100E15CC3 /* InviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43B22F72BA3393100E15CC3 /* InviteCodeView.swift */; };
+		A43B232D2BA6A44600E15CC3 /* StoreInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43B232C2BA6A44600E15CC3 /* StoreInputViewController.swift */; };
+		A43B232F2BA6A45000E15CC3 /* StoreInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43B232E2BA6A45000E15CC3 /* StoreInputView.swift */; };
+		A43B23312BA6A7F100E15CC3 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43B23302BA6A7F100E15CC3 /* String+.swift */; };
 		A43C73E82B8F31C900B39F21 /* SUIT-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E42B8F31C900B39F21 /* SUIT-SemiBold.ttf */; };
 		A43C73E92B8F31C900B39F21 /* SUIT-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E52B8F31C900B39F21 /* SUIT-Medium.ttf */; };
 		A43C73EA2B8F31C900B39F21 /* SUIT-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E62B8F31C900B39F21 /* SUIT-Bold.ttf */; };
@@ -98,6 +101,9 @@
 		A43B22F02BA3022C00E15CC3 /* Cafebara-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cafebara-iOS.entitlements"; sourceTree = "<group>"; };
 		A43B22F52BA3392500E15CC3 /* InviteCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCodeViewController.swift; sourceTree = "<group>"; };
 		A43B22F72BA3393100E15CC3 /* InviteCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCodeView.swift; sourceTree = "<group>"; };
+		A43B232C2BA6A44600E15CC3 /* StoreInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInputViewController.swift; sourceTree = "<group>"; };
+		A43B232E2BA6A45000E15CC3 /* StoreInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInputView.swift; sourceTree = "<group>"; };
+		A43B23302BA6A7F100E15CC3 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		A43C73E42B8F31C900B39F21 /* SUIT-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-SemiBold.ttf"; sourceTree = "<group>"; };
 		A43C73E52B8F31C900B39F21 /* SUIT-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Medium.ttf"; sourceTree = "<group>"; };
 		A43C73E62B8F31C900B39F21 /* SUIT-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SUIT-Bold.ttf"; sourceTree = "<group>"; };
@@ -226,6 +232,7 @@
 				833DC8002B874D250096703B /* UIView+.swift */,
 				8304715D2B87BD22005AEEB4 /* UIImageView+.swift */,
 				833DC8052B874D9A0096703B /* NSObject+.swift */,
+				A43B23302BA6A7F100E15CC3 /* String+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -302,6 +309,7 @@
 		A41289D92B9F729500E3462D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				A43B23292BA6A41800E15CC3 /* StoreInputScene */,
 				A43B22F12BA338E100E15CC3 /* InviteCodeScene */,
 				A41289DA2B9F72B500E3462D /* RoleChoiceScene */,
 				A41289E62BA04B5600E3462D /* NameInputScene */,
@@ -403,6 +411,31 @@
 				A41289EE2BA04CC100E3462D /* CustomTextField.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		A43B23292BA6A41800E15CC3 /* StoreInputScene */ = {
+			isa = PBXGroup;
+			children = (
+				A43B232B2BA6A43600E15CC3 /* View */,
+				A43B232A2BA6A43000E15CC3 /* ViewController */,
+			);
+			path = StoreInputScene;
+			sourceTree = "<group>";
+		};
+		A43B232A2BA6A43000E15CC3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A43B232C2BA6A44600E15CC3 /* StoreInputViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A43B232B2BA6A43600E15CC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A43B232E2BA6A45000E15CC3 /* StoreInputView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A43C73E22B8F30BD00B39F21 /* Network */ = {
@@ -617,9 +650,11 @@
 				A41289E32B9F731300E3462D /* RoleChoiceViewController.swift in Sources */,
 				8304715A2B87BBC2005AEEB4 /* UIButton+.swift in Sources */,
 				833DC8042B874D5C0096703B /* UITableViewRegisterable.swift in Sources */,
+				A43B232F2BA6A45000E15CC3 /* StoreInputView.swift in Sources */,
 				A43C73FA2B90516C00B39F21 /* APIConstant.swift in Sources */,
 				A41289EA2BA04B9D00E3462D /* NameInputViewController.swift in Sources */,
 				833DC8012B874D250096703B /* UIView+.swift in Sources */,
+				A43B23312BA6A7F100E15CC3 /* String+.swift in Sources */,
 				8304715E2B87BD22005AEEB4 /* UIImageView+.swift in Sources */,
 				833DC7FE2B874CED0096703B /* SizeLiterals.swift in Sources */,
 				833A6AF52B873317001370CD /* ViewController.swift in Sources */,
@@ -642,6 +677,7 @@
 				8304715C2B87BBEB005AEEB4 /* UITextField+.swift in Sources */,
 				A43C73F42B90513900B39F21 /* Config.swift in Sources */,
 				A43C73F82B90515D00B39F21 /* NetworkLoggerPlugin.swift in Sources */,
+				A43B232D2BA6A44600E15CC3 /* StoreInputViewController.swift in Sources */,
 				833A6AF32B873317001370CD /* SceneDelegate.swift in Sources */,
 				830471542B87B9E2005AEEB4 /* UIColor+.swift in Sources */,
 			);

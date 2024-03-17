@@ -14,6 +14,7 @@ import Moya
 protocol OnboardingRegisterViewModelInputs {
     func saveRole(isOwner: Bool)
     func saveName(name: String)
+    func saveStore(store: String)
     func certifyInviteCode(code: String)
 }
 
@@ -34,6 +35,7 @@ final class OnboardingRegisterViewModel: OnboardingRegisterViewModelInputs, Onbo
     
     var isOwner: Bool = false
     var name: String = ""
+    var store: String = ""
     
     // input
     
@@ -43,6 +45,10 @@ final class OnboardingRegisterViewModel: OnboardingRegisterViewModelInputs, Onbo
     
     func saveName(name: String) {
         self.name = name
+    }
+    
+    func saveStore(store: String) {
+        self.store = store
     }
     
     func certifyInviteCode(code: String) {

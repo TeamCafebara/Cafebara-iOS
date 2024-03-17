@@ -37,5 +37,7 @@ enum I18N {
         static let inviteCodeTitle = "반가워요!\n초대코드를 입력해 주세요"
         static let isCertifyLabelSuccess = "코드 인증 성공!"
         static let isCertifyLabelFail = "코드 인증 실패!"
+        static let storeInputOwnerTitle = "고마워요 사장님!\n사장님의 가게명을 알려주세요"
+        static let storeInputPlaceholder = "사장님의 가게명을 최대 18글자로 입력해 주세요!"
     }
 }
