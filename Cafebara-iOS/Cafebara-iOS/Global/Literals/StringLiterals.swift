@@ -43,5 +43,7 @@ enum I18N {
         static let codePastToastTitle = "초대코드가 복사되었어요"
         static let codePasteTitle = "초대코드 복사"
         static let codeShareTitle = "초대코드 공유"
+        static let startButtonTitle = "시작하기"
+        static let registerCompleteTitle = "사장과 직원이 함께 보는\n카페바라, 같이 시작해 보아요!"
     }
 }

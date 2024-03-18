@@ -65,6 +65,13 @@ extension InviteCodeViewController {
             }
             .disposed(by: disposeBag)
         
+        inviteCodeView.nextButton.rx.tap
+            .bind {
+                let nav = RegisterCompleteViewController(viewModel: self.viewModel)
+                self.navigationController?.pushViewController(nav, animated: true)
+            }
+            .disposed(by: disposeBag)
+        
         viewModel.outputs.isCertified
             .subscribe(onNext: { isSuccess in
                 self.inviteCodeView.isCertifyLabel.text = isSuccess ? I18N.OnboardingRegister.isCertifyLabelSuccess : I18N.OnboardingRegister.isCertifyLabelFail
