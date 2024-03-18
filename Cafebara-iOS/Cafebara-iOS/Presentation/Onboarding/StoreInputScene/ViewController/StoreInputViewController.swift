@@ -61,6 +61,8 @@ extension StoreInputViewController {
                 if let storeText = self.storeInputView.storeInputTextField.text {
                     self.viewModel.inputs.saveStore(store: storeText)
                 }
+                let nav = InviteCodeViewController(viewModel: self.viewModel)
+                self.navigationController?.pushViewController(nav, animated: true)
             }
             .disposed(by: disposeBag)
     }

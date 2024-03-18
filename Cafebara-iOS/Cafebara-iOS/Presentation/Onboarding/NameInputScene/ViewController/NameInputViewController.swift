@@ -48,7 +48,7 @@ final class NameInputViewController: UIViewController {
 // MARK: - Extensions
 
 extension NameInputViewController {
-
+    
     func setUI() {
         self.nameInputview.nameInputTitle.text = onboardingViewModel.isOwner ? I18N.OnboardingRegister.nameInputOwnerTitle : I18N.OnboardingRegister.nameInputStaffTitle
         self.nameInputview.nameInputTextField.placeholder = onboardingViewModel.isOwner ? I18N.OnboardingRegister.nameInputOwnerPlaceholer : I18N.OnboardingRegister.nameInputStaffPlaceholer
@@ -56,15 +56,20 @@ extension NameInputViewController {
             self.navigationController?.popViewController(animated: true)
         }
     }
-
+    
     func bindViewModel() {
         nameInputview.nextButton.rx.tap
             .bind {
                 if let nameText = self.nameInputview.nameInputTextField.text {
                     self.onboardingViewModel.inputs.saveName(name: nameText)
                 }
-                let nav = InviteCodeViewController(viewModel: self.onboardingViewModel)
-                self.navigationController?.pushViewController(nav, animated: true)
+                if let navigationController = self.navigationController {
+                    if self.onboardingViewModel.isOwner {
+                        navigationController.pushViewController(StoreInputViewController(viewModel: self.onboardingViewModel), animated: true)
+                    } else {
+                        navigationController.pushViewController(InviteCodeViewController(viewModel: self.onboardingViewModel), animated: true)
+                    }
+                }
             }
             .disposed(by: disposeBag)
     }
