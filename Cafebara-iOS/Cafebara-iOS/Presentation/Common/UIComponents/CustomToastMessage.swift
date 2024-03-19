@@ -14,6 +14,14 @@ final class CustomToastMessage: UIView {
 
     // MARK: - Properties
     
+    override var isHidden: Bool {
+        didSet {
+            if !isHidden {
+                setAnimation()
+            }
+        }
+    }
+    
     private var labelWidth: CGFloat = 0
     
     // MARK: - UI Components
@@ -36,7 +44,6 @@ final class CustomToastMessage: UIView {
         setToastUI(title: title)
         setHierarchy()
         setLayout()
-        setAnimation()
     }
 }
 
