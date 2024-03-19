@@ -140,7 +140,7 @@ private extension InviteCodeView {
         }
         
         codeInputTextField.snp.makeConstraints {
-            $0.top.equalTo(inviteCodeTitle.snp.bottom).offset(SizeLiterals.Screen.screenHeight * 40 / 667)
+            $0.top.equalTo(inviteCodeTitle.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
         }
         
@@ -160,7 +160,7 @@ private extension InviteCodeView {
         }
         
         ownerInviteCodeView.snp.makeConstraints {
-            $0.top.equalTo(inviteCodeTitle.snp.bottom).offset(SizeLiterals.Screen.screenHeight * 40 / 667)
+            $0.top.equalTo(inviteCodeTitle.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
             $0.width.equalTo(SizeLiterals.Screen.screenWidth - 40)
             $0.height.equalTo(SizeLiterals.Screen.screenHeight * 95 / 667)

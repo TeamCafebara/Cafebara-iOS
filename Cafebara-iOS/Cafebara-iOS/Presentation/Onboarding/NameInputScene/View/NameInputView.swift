@@ -75,7 +75,7 @@ private extension NameInputView {
         }
         
         nameInputTextField.snp.makeConstraints {
-            $0.top.equalTo(nameInputTitle.snp.bottom).offset(SizeLiterals.Screen.screenHeight * 33 / 667)
+            $0.top.equalTo(nameInputTitle.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
         }
         

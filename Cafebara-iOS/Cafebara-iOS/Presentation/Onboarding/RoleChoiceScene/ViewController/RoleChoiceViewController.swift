@@ -45,6 +45,7 @@ final class RoleChoiceViewController: UIViewController {
 extension RoleChoiceViewController {
 
     func setUI() {
+        self.navigationController?.navigationBar.isHidden = true
         roleChoiceView.navigationBar.backButtonAction = {
             self.navigationController?.popViewController(animated: false)
         }

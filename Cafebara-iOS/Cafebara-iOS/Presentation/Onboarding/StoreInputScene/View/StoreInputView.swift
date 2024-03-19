@@ -76,7 +76,7 @@ private extension StoreInputView {
         }
         
         storeInputTextField.snp.makeConstraints {
-            $0.top.equalTo(storeInputTitle.snp.bottom).offset(SizeLiterals.Screen.screenHeight * 33 / 667)
+            $0.top.equalTo(storeInputTitle.snp.bottom).offset(40)
             $0.centerX.equalToSuperview()
         }
         
