@@ -48,6 +48,7 @@
 		A43B23422BA87F0900E15CC3 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = A43B23412BA87F0900E15CC3 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		A43B23442BA87F0900E15CC3 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = A43B23432BA87F0900E15CC3 /* FirebaseMessaging */; };
 		A43B23462BA8830B00E15CC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A43B23452BA8830B00E15CC3 /* GoogleService-Info.plist */; };
+		A43B237A2BA98BFC00E15CC3 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = A43B23792BA98BFC00E15CC3 /* RxGesture */; };
 		A43C73E82B8F31C900B39F21 /* SUIT-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E42B8F31C900B39F21 /* SUIT-SemiBold.ttf */; };
 		A43C73E92B8F31C900B39F21 /* SUIT-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E52B8F31C900B39F21 /* SUIT-Medium.ttf */; };
 		A43C73EA2B8F31C900B39F21 /* SUIT-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A43C73E62B8F31C900B39F21 /* SUIT-Bold.ttf */; };
@@ -145,6 +146,7 @@
 				A43B23402BA87F0900E15CC3 /* FirebaseAnalyticsSwift in Frameworks */,
 				A488FBA22B9B5FC1004D4A09 /* SnapKit in Frameworks */,
 				A488FB8A2B9B5DE8004D4A09 /* Then in Frameworks */,
+				A43B237A2BA98BFC00E15CC3 /* RxGesture in Frameworks */,
 				A488FBA52B9B616B004D4A09 /* FSCalendar in Frameworks */,
 				A43B23422BA87F0900E15CC3 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				A43B23442BA87F0900E15CC3 /* FirebaseMessaging in Frameworks */,
@@ -595,6 +597,7 @@
 				A43B233F2BA87F0900E15CC3 /* FirebaseAnalyticsSwift */,
 				A43B23412BA87F0900E15CC3 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				A43B23432BA87F0900E15CC3 /* FirebaseMessaging */,
+				A43B23792BA98BFC00E15CC3 /* RxGesture */,
 			);
 			productName = "Cafebara-iOS";
 			productReference = 833A6AED2B873317001370CD /* Cafebara-iOS.app */;
@@ -632,6 +635,7 @@
 				A488FBA02B9B5FC1004D4A09 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				A488FBA32B9B616B004D4A09 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				A43B233A2BA87F0900E15CC3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A43B23782BA98BFC00E15CC3 /* XCRemoteSwiftPackageReference "RxGesture" */,
 			);
 			productRefGroup = 833A6AEE2B873317001370CD /* Products */;
 			projectDirPath = "";
@@ -963,6 +967,14 @@
 				minimumVersion = 10.22.1;
 			};
 		};
+		A43B23782BA98BFC00E15CC3 /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.4;
+			};
+		};
 		A488FB882B9B5DE8004D4A09 /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then.git";
@@ -1038,6 +1050,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A43B233A2BA87F0900E15CC3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
+		};
+		A43B23792BA98BFC00E15CC3 /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A43B23782BA98BFC00E15CC3 /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
 		};
 		A488FB892B9B5DE8004D4A09 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;

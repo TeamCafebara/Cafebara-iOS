@@ -10,6 +10,7 @@ import UIKit
 import Then
 import RxSwift
 import RxCocoa
+import RxGesture
 
 final class InviteCodeViewController: UIViewController {
     
@@ -71,6 +72,14 @@ extension InviteCodeViewController {
             .bind {
                 let nav = RegisterCompleteViewController(viewModel: self.viewModel)
                 self.navigationController?.pushViewController(nav, animated: true)
+            }
+            .disposed(by: disposeBag)
+        
+        inviteCodeView.codePasteView.rx.tapGesture()
+            .when(.recognized)
+            .bind { _ in
+                UIPasteboard.general.string = self.inviteCodeView.ownerInviteCodeLabel.text
+                self.inviteCodeView.codePasteToast.isHidden = false
             }
             .disposed(by: disposeBag)
         

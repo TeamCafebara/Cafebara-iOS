@@ -31,7 +31,7 @@ final class InviteCodeView: UIView {
     private let codeShareStackView = UIStackView()
     private let codeShareImage = UIImageView(image: .icShare)
     private let codeShareTitle = UILabel()
-    private let codePasteToast = CustomToastMessage(title: I18N.OnboardingRegister.codePastToastTitle)
+    let codePasteToast = CustomToastMessage(title: I18N.OnboardingRegister.codePastToastTitle)
     
     // MARK: - Life Cycles
     
