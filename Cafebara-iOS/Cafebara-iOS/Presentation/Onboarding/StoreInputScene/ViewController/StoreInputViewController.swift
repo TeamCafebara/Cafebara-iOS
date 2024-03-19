@@ -50,6 +50,8 @@ final class StoreInputViewController: UIViewController {
 extension StoreInputViewController {
 
     func setUI() {
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         self.storeInputView.navigationBar.backButtonAction = {
             self.navigationController?.popViewController(animated: true)
         }

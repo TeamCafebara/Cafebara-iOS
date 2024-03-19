@@ -50,6 +50,8 @@ final class NameInputViewController: UIViewController {
 extension NameInputViewController {
     
     func setUI() {
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         self.nameInputview.nameInputTitle.text = onboardingViewModel.isOwner ? I18N.OnboardingRegister.nameInputOwnerTitle : I18N.OnboardingRegister.nameInputStaffTitle
         self.nameInputview.nameInputTextField.placeholder = onboardingViewModel.isOwner ? I18N.OnboardingRegister.nameInputOwnerPlaceholer : I18N.OnboardingRegister.nameInputStaffPlaceholer
         self.nameInputview.navigationBar.backButtonAction = {

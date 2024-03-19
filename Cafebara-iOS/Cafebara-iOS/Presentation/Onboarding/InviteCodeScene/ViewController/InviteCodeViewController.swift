@@ -51,6 +51,8 @@ final class InviteCodeViewController: UIViewController {
 extension InviteCodeViewController {
 
     func setUI() {
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         inviteCodeView.navigationBar.backButtonAction = {
             self.navigationController?.popViewController(animated: true)
         }

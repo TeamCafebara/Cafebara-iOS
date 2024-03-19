@@ -51,6 +51,8 @@ final class RegisterCompleteViewController: UIViewController {
 extension RegisterCompleteViewController {
 
     func setUI() {
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         self.registerCompleteView.navigationBar.backButtonAction = {
             self.navigationController?.popViewController(animated: true)
         }
