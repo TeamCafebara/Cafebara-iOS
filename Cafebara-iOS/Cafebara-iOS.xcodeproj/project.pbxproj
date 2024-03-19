@@ -56,6 +56,8 @@
 		F113CB4B2BA2F2F600FA6D71 /* MyWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */; };
 		F113CB4D2BA308C800FA6D71 /* MyWorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4C2BA308C800FA6D71 /* MyWorkViewModel.swift */; };
 		F113CB502BA31AEC00FA6D71 /* CustomPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4F2BA31AEC00FA6D71 /* CustomPaddingLabel.swift */; };
+		F13062922BA991EA00E5B680 /* MyWorkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13062912BA991EA00E5B680 /* MyWorkInfo.swift */; };
+		F13062942BA99C8B00E5B680 /* MyWorkInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13062932BA99C8B00E5B680 /* MyWorkInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkView.swift; sourceTree = "<group>"; };
 		F113CB4C2BA308C800FA6D71 /* MyWorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkViewModel.swift; sourceTree = "<group>"; };
 		F113CB4F2BA31AEC00FA6D71 /* CustomPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPaddingLabel.swift; sourceTree = "<group>"; };
+		F13062912BA991EA00E5B680 /* MyWorkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkInfo.swift; sourceTree = "<group>"; };
+		F13062932BA99C8B00E5B680 /* MyWorkInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +401,7 @@
 		F113CB432BA2EF3E00FA6D71 /* MyWorkScene */ = {
 			isa = PBXGroup;
 			children = (
+				F13062902BA991D900E5B680 /* Model */,
 				F113CB452BA2EF9F00FA6D71 /* ViewController */,
 				F113CB472BA2EFBB00FA6D71 /* ViewModel */,
 				F113CB462BA2EFA700FA6D71 /* View */,
@@ -415,6 +420,7 @@
 		F113CB462BA2EFA700FA6D71 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F13062932BA99C8B00E5B680 /* MyWorkInfoView.swift */,
 				F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */,
 			);
 			path = View;
@@ -434,6 +440,14 @@
 				F113CB4F2BA31AEC00FA6D71 /* CustomPaddingLabel.swift */,
 			);
 			path = CustomLabel;
+			sourceTree = "<group>";
+		};
+		F13062902BA991D900E5B680 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F13062912BA991EA00E5B680 /* MyWorkInfo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -583,7 +597,9 @@
 				8304715C2B87BBEB005AEEB4 /* UITextField+.swift in Sources */,
 				A43C73F42B90513900B39F21 /* Config.swift in Sources */,
 				A43C73F82B90515D00B39F21 /* NetworkLoggerPlugin.swift in Sources */,
+				F13062922BA991EA00E5B680 /* MyWorkInfo.swift in Sources */,
 				F113CB492BA2EFCD00FA6D71 /* MyWorkViewController.swift in Sources */,
+				F13062942BA99C8B00E5B680 /* MyWorkInfoView.swift in Sources */,
 				833A6AF32B873317001370CD /* SceneDelegate.swift in Sources */,
 				830471542B87B9E2005AEEB4 /* UIColor+.swift in Sources */,
 			);
