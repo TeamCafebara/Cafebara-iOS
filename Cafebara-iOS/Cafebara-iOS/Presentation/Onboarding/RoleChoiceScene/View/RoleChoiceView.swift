@@ -120,7 +120,7 @@ private extension RoleChoiceView {
             $0.snp.makeConstraints {
                 $0.top.equalTo(roleChoiceTitle.snp.bottom).offset(40)
                 $0.width.equalTo((SizeLiterals.Screen.screenWidth - 65) / 2)
-                $0.height.equalTo(155)
+                $0.height.equalTo(SizeLiterals.Screen.screenHeight <= 812 ? 160 : 190)
             }
         })
         
