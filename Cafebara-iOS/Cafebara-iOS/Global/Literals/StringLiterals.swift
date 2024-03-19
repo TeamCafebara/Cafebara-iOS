@@ -17,4 +17,13 @@ enum I18N {
         static let alertLeftTitle2 = "취소할게요"
         static let alertRightTitle2 = "보낼게요"
     }
+    
+    enum MyWork {
+        static let myWorkNavigationTitle = "나의 근무"
+        static let askChangingWorkButtonTitle = "대타 요청하기"
+        static let askButtonTitle = "요청 보내기"
+        static let workTimeTitle = "근무시간"
+        static let wokerTitle = "근무자"
+        static let swungDash = "~"
+    }
 }
