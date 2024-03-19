@@ -8,15 +8,19 @@
 import UIKit
 
 import SnapKit
-Import Then
+import Then
 
 final class MyWorkView: UIView {
 
     // MARK: - Properties
     
-    
     // MARK: - UI Components
     
+    let navigationBar = CustomNavigationView()
+    let myWorkInfoView = MyWorkInfoView(type: .MyWork)
+    let askButton = CustomButton(status: true,
+                                 type: .noBorder,
+                                 title: I18N.MyWork.askChangingWorkButtonTitle)
     
     // MARK: - Life Cycles
     
@@ -27,7 +31,6 @@ final class MyWorkView: UIView {
         setStyle()
         setHierarchy()
         setLayout()
-        setRegisterCell()
     }
     
     @available(*, unavailable)
@@ -41,23 +44,38 @@ final class MyWorkView: UIView {
 private extension MyWorkView {
 
     func setUI() {
-        
+        backgroundColor = .backgroundBara
     }
 
     func setStyle() {
-        
+        navigationBar.do {
+            $0.isBackButtonIncluded = true
+            $0.isTitleLabelIncluded = true
+            $0.titleLabelText = I18N.MyWork.myWorkNavigationTitle
+        }
     }
     
     func setHierarchy() {
-
+        addSubviews(navigationBar,
+                    myWorkInfoView,
+                    askButton)
     }
     
     func setLayout() {
-
-    }
-    
-    func setRegisterCell() {
+        navigationBar.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide)
+            $0.leading.trailing.equalToSuperview()
+        }
         
+        myWorkInfoView.snp.makeConstraints {
+            $0.top.equalTo(navigationBar.snp.bottom).offset(12)
+            $0.centerX.equalToSuperview()
+        }
+        
+        askButton.snp.makeConstraints {
+            $0.bottom.equalTo(safeAreaLayoutGuide).offset(-14)
+            $0.centerX.equalToSuperview()
+        }
     }
 }
 
