@@ -7,42 +7,64 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
+import AuthenticationServices
+
 final class LoginViewController: UIViewController {
     
-    // MARK: - Properties
     
+    // MARK: - Properties
+    private let viewModel = LoginViewModel()
+    private let disposeBag = DisposeBag()
     
     // MARK: - UI Components
-    
+    private let loginView = LoginView()
     
     // MARK: - Life Cycles
-    
     override func loadView() {
-        
+        view = loginView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUI()
         bindViewModel()
-        setDelegate()
+        setTarget()
     }
 }
 
 // MARK: - Extensions
 
 extension LoginViewController {
-
-    func setUI() {
-        
-    }
-
     func bindViewModel() {
-	
+        viewModel.outputs.imageData
+            .bind(to: loginView.loginCollectionView.rx
+                .items(cellIdentifier: LoginCollectionViewCell.className,
+                       cellType: LoginCollectionViewCell.self)) { (index, model, cell) in
+                cell.configureCell(model: model)
+            }
+                       .disposed(by: disposeBag)
     }
     
-    func setDelegate() {
+    func setTarget() {
+        loginView.loginButton.addTarget(self, action: #selector(tapAppleLogin), for: .touchUpInside)
+    }
+    
+    @objc func tapAppleLogin() {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.fullName, .email]
         
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
+    }
+}
+
+extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding{
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
     }
 }
