@@ -15,8 +15,10 @@ final class NameInputView: UIView {
     
     let navigationBar = CustomNavigationView()
     let nameInputTitle = UILabel()
-    lazy var nameInputTextField = CustomTextField(placeHolder: "")
-    let nextButton = CustomButton(status: false, type: .noBorder, title: I18N.Common.nextButtonTitle)
+    lazy var nameInputTextField = CustomTextField()
+    let nextButton = CustomButton(status: false, 
+                                  type: .noBorder,
+                                  title: I18N.Common.nextButtonTitle)
     
     // MARK: - Life Cycles
     
@@ -28,7 +30,6 @@ final class NameInputView: UIView {
         setHierarchy()
         setLayout()
         setDelegate()
-        setGesture()
     }
     
     @available(*, unavailable)
@@ -87,16 +88,6 @@ private extension NameInputView {
     
     func setDelegate() {
         nameInputTextField.delegate = self
-    }
-    
-    func setGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        self.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc
-    func dismissKeyboard() {
-        self.endEditing(true)
     }
 }
 

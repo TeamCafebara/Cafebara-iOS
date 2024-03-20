@@ -18,8 +18,12 @@ final class InviteCodeView: UIView {
     let inviteCodeTitle = UILabel()
     lazy var codeInputTextField = CustomTextField(placeHolder: I18N.OnboardingRegister.codeInputPlaceholder)
     let isCertifyLabel = UILabel()
-    lazy var codeCertifyButton = CustomButton(status: false, type: .hasBorder, title: I18N.OnboardingRegister.codeCertifyButtonTitle)
-    lazy var nextButton = CustomButton(status: false, type: .noBorder, title: I18N.Common.nextButtonTitle)
+    lazy var codeCertifyButton = CustomButton(status: false, 
+                                              type: .hasBorder,
+                                              title: I18N.OnboardingRegister.codeCertifyButtonTitle)
+    lazy var nextButton = CustomButton(status: false, 
+                                       type: .noBorder,
+                                       title: I18N.Common.nextButtonTitle)
     
     private let ownerInviteCodeView = UIView()
     let ownerInviteCodeLabel = UILabel()
@@ -43,7 +47,6 @@ final class InviteCodeView: UIView {
         setHierarchy()
         setLayout()
         setDelegate()
-        setGesture()
     }
     
     @available(*, unavailable)
@@ -85,6 +88,7 @@ private extension InviteCodeView {
             $0.backgroundColor = .blue10
         }
         
+        /// TODO: 서버통신 이후 bind
         ownerInviteCodeLabel.do {
             $0.text = "CAFEBARA-240119"
             $0.textColor = .gray8
@@ -206,16 +210,6 @@ private extension InviteCodeView {
     
     func setDelegate() {
         codeInputTextField.delegate = self
-    }
-    
-    func setGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        self.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc
-    func dismissKeyboard() {
-        self.endEditing(true)
     }
 }
 

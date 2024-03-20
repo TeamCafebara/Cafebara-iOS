@@ -21,15 +21,17 @@ final class RoleChoiceView: UIView {
     
     let navigationBar = CustomNavigationView()
     private let roleChoiceTitle = UILabel()
-    private let ownerView = UIView()
+    let ownerView = UIView()
     private let ownerStackView = UIStackView()
     private let ownerImage = UIImageView(image: .profile)
     private let ownerTitle = UILabel()
-    private let staffView = UIView()
+    let staffView = UIView()
     private let staffStackView = UIStackView()
     private let staffImage = UIImageView(image: .profile)
     private let staffTitle = UILabel()
-    lazy var nextButton = CustomButton(status: false, type: .noBorder, title: I18N.Common.nextButtonTitle)
+    lazy var nextButton = CustomButton(status: false, 
+                                       type: .noBorder,
+                                       title: I18N.Common.nextButtonTitle)
     
     // MARK: - Life Cycles
     
@@ -40,7 +42,6 @@ final class RoleChoiceView: UIView {
         setStyle()
         setHierarchy()
         setLayout()
-        setGesture()
     }
     
     @available(*, unavailable)
@@ -150,32 +151,6 @@ private extension RoleChoiceView {
         }
     }
     
-    func setGesture() {
-        let ownerTapGesture = UITapGestureRecognizer(target: self, action: #selector(ownerViewTapped))
-        ownerView.addGestureRecognizer(ownerTapGesture)
-        
-        let staffTapGesture = UITapGestureRecognizer(target: self, action: #selector(staffViewTapped))
-        staffView.addGestureRecognizer(staffTapGesture)
-    }
-    
-    @objc private func ownerViewTapped() {
-        isOwnerSelected.toggle()
-        if isOwnerSelected {
-            isStaffSelected = false
-        }
-        updateChoiceView()
-        updateButton()
-    }
-
-    @objc private func staffViewTapped() {
-        isStaffSelected.toggle()
-        if isStaffSelected {
-            isOwnerSelected = false
-        }
-        updateChoiceView()
-        updateButton()
-    }
-    
     func updateChoiceView() {
         ownerView.layer.borderColor = isOwnerSelected ? UIColor.blueBara.cgColor : UIColor.gray1.cgColor
         ownerTitle.textColor = isOwnerSelected ? .blueBara : .gray2
@@ -194,5 +169,26 @@ private extension RoleChoiceView {
 
     func updateButton() {
         nextButton.isEnabled = isOwnerSelected || isStaffSelected
+    }
+}
+
+extension RoleChoiceView {
+    
+    func ownerViewTapped() {
+        isOwnerSelected.toggle()
+        if isOwnerSelected {
+            isStaffSelected = false
+        }
+        updateChoiceView()
+        updateButton()
+    }
+    
+    func staffViewTapped() {
+        isStaffSelected.toggle()
+        if isStaffSelected {
+            isOwnerSelected = false
+        }
+        updateChoiceView()
+        updateButton()
     }
 }

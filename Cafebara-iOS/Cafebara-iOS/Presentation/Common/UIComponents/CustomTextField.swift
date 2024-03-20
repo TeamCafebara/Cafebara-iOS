@@ -8,6 +8,7 @@
 import UIKit
 
 import SnapKit
+import Then
 
 final class CustomTextField: UITextField {
     
@@ -46,6 +47,7 @@ final class CustomTextField: UITextField {
         super.init(frame: frame)
         
         setLayout()
+        setUI("")
     }
     
     required init?(coder: NSCoder) {
@@ -55,7 +57,7 @@ final class CustomTextField: UITextField {
     convenience init(placeHolder: String) {
         self.init()
         
-        setUI(placeHolder: placeHolder)
+        setUI(placeHolder)
     }
 }
 
@@ -63,16 +65,18 @@ final class CustomTextField: UITextField {
 
 extension CustomTextField {
     
-    private func setUI(placeHolder: String) {
-        self.textColor = .gray7
-        self.backgroundColor = .whiteBara
-        self.font = .fontBara(.body3)
-        self.changePlaceholderColor(forPlaceHolder: "\(placeHolder)", forColor: .gray2)
-        self.layer.cornerRadius =  12
-        self.layer.borderColor = textFieldStatus.borderColor
-        self.layer.borderWidth = 1
-        self.addPadding(left: 16)
-        self.clearButtonMode = .whileEditing
+    private func setUI(_ placeHolder: String) {
+        self.do {
+            $0.textColor = .gray7
+            $0.backgroundColor = .whiteBara
+            $0.font = .fontBara(.body3)
+            $0.changePlaceholderColor(forPlaceHolder: "\(placeHolder)", forColor: .gray2)
+            $0.layer.cornerRadius =  12
+            $0.layer.borderColor = textFieldStatus.borderColor
+            $0.layer.borderWidth = 1
+            $0.addPadding(left: 16)
+            $0.clearButtonMode = .whileEditing
+        }
     }
     
     private func setLayout() {

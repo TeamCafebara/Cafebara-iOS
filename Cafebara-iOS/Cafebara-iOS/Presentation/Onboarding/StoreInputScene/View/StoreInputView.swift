@@ -16,7 +16,9 @@ final class StoreInputView: UIView {
     let navigationBar = CustomNavigationView()
     let storeInputTitle = UILabel()
     lazy var storeInputTextField = CustomTextField(placeHolder: I18N.OnboardingRegister.storeInputPlaceholder)
-    let nextButton = CustomButton(status: false, type: .noBorder, title: I18N.Common.nextButtonTitle)
+    let nextButton = CustomButton(status: false, 
+                                  type: .noBorder,
+                                  title: I18N.Common.nextButtonTitle)
     
     // MARK: - Life Cycles
     
@@ -28,7 +30,6 @@ final class StoreInputView: UIView {
         setHierarchy()
         setLayout()
         setDelegate()
-        setGesture()
     }
     
     @available(*, unavailable)
@@ -88,16 +89,6 @@ private extension StoreInputView {
     
     func setDelegate() {
         storeInputTextField.delegate = self
-    }
-    
-    func setGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        self.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc
-    func dismissKeyboard() {
-        self.endEditing(true)
     }
 }
 

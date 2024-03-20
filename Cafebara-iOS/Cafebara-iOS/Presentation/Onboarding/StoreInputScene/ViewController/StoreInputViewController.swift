@@ -9,6 +9,7 @@ import UIKit
 
 import RxSwift
 import RxCocoa
+import RxGesture
 
 final class StoreInputViewController: UIViewController {
     
@@ -33,7 +34,6 @@ final class StoreInputViewController: UIViewController {
     }
     
     override func loadView() {
-        
         view = storeInputView
     }
     
@@ -65,6 +65,13 @@ extension StoreInputViewController {
                 }
                 let nav = InviteCodeViewController(viewModel: self.viewModel)
                 self.navigationController?.pushViewController(nav, animated: true)
+            }
+            .disposed(by: disposeBag)
+        
+        storeInputView.rx.tapGesture()
+            .when(.recognized)
+            .bind { _ in
+                self.storeInputView.endEditing(true)
             }
             .disposed(by: disposeBag)
     }

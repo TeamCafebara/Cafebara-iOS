@@ -34,7 +34,6 @@ final class RegisterCompleteViewController: UIViewController {
     }
     
     override func loadView() {
-        
         view = registerCompleteView
     }
     
@@ -81,6 +80,8 @@ extension RegisterCompleteViewController: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.list, .banner])
     }
+    
+    /// TODO: 푸시알림 허용창에서 허용을 눌렀을때 homeVC로 가기 위한 코드
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         

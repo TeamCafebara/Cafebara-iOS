@@ -35,7 +35,6 @@ final class InviteCodeViewController: UIViewController {
     }
     
     override func loadView() {
-        
         view = inviteCodeView
     }
     
@@ -80,6 +79,13 @@ extension InviteCodeViewController {
             .bind { _ in
                 UIPasteboard.general.string = self.inviteCodeView.ownerInviteCodeLabel.text
                 self.inviteCodeView.codePasteToast.isHidden = false
+            }
+            .disposed(by: disposeBag)
+        
+        inviteCodeView.rx.tapGesture()
+            .when(.recognized)
+            .bind { _ in
+                self.inviteCodeView.endEditing(true)
             }
             .disposed(by: disposeBag)
         

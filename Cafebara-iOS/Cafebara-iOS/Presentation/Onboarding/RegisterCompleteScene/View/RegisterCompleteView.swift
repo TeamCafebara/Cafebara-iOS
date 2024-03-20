@@ -16,7 +16,9 @@ final class RegisterCompleteView: UIView {
     let navigationBar = CustomNavigationView()
     let registerCompleteTitle = UILabel()
     lazy var completeImage = UIImageView(image: .profile)
-    let startButton = CustomButton(status: true, type: .noBorder, title: I18N.OnboardingRegister.startButtonTitle)
+    let startButton = CustomButton(status: true, 
+                                   type: .noBorder,
+                                   title: I18N.OnboardingRegister.startButtonTitle)
     
     // MARK: - Life Cycles
     

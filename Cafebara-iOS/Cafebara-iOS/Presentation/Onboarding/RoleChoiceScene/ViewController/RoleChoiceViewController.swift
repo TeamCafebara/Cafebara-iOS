@@ -9,6 +9,7 @@ import UIKit
 
 import RxSwift
 import RxCocoa
+import RxGesture
 
 final class RoleChoiceViewController: UIViewController {
     
@@ -24,19 +25,14 @@ final class RoleChoiceViewController: UIViewController {
     // MARK: - Life Cycles
     
     override func loadView() {
-        
         view = roleChoiceView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getAPI()
         setUI()
         bindViewModel()
-        setHierarchy()
-        setLayout()
-        setDelegate()
     }
 }
 
@@ -60,26 +56,19 @@ extension RoleChoiceViewController {
                 self.navigationController?.pushViewController(nav, animated: true)
             }
             .disposed(by: disposeBag)
-    }
-    
-    func setHierarchy() {
         
-    }
-    
-    func setLayout() {
+        roleChoiceView.ownerView.rx.tapGesture()
+            .when(.recognized)
+            .bind { _ in
+                self.roleChoiceView.ownerViewTapped()
+            }
+            .disposed(by: disposeBag)
         
-    }
-    
-    func setDelegate() {
-        
-    }
-}
-
-// MARK: - Network
-
-extension RoleChoiceViewController {
-
-    func getAPI() {
-        
+        roleChoiceView.staffView.rx.tapGesture()
+            .when(.recognized)
+            .bind { _ in
+                self.roleChoiceView.staffViewTapped()
+            }
+            .disposed(by: disposeBag)
     }
 }

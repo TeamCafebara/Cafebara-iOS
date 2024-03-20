@@ -9,6 +9,7 @@ import UIKit
 
 import RxSwift
 import RxCocoa
+import RxGesture
 
 final class NameInputViewController: UIViewController {
     
@@ -19,7 +20,7 @@ final class NameInputViewController: UIViewController {
     
     // MARK: - UI Components
     
-    private let nameInputview = NameInputView()
+    private let nameInputView = NameInputView()
     
     // MARK: - Life Cycles
     
@@ -33,8 +34,7 @@ final class NameInputViewController: UIViewController {
     }
     
     override func loadView() {
-        
-        view = nameInputview
+        view = nameInputView
     }
     
     override func viewDidLoad() {
@@ -52,17 +52,17 @@ extension NameInputViewController {
     func setUI() {
         self.navigationController?.navigationBar.isHidden = true
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
-        self.nameInputview.nameInputTitle.text = onboardingViewModel.isOwner ? I18N.OnboardingRegister.nameInputOwnerTitle : I18N.OnboardingRegister.nameInputStaffTitle
-        self.nameInputview.nameInputTextField.placeholder = onboardingViewModel.isOwner ? I18N.OnboardingRegister.nameInputOwnerPlaceholer : I18N.OnboardingRegister.nameInputStaffPlaceholer
-        self.nameInputview.navigationBar.backButtonAction = {
+        self.nameInputView.nameInputTitle.text = onboardingViewModel.isOwner ? I18N.OnboardingRegister.nameInputOwnerTitle : I18N.OnboardingRegister.nameInputStaffTitle
+        self.nameInputView.nameInputTextField.placeholder = onboardingViewModel.isOwner ? I18N.OnboardingRegister.nameInputOwnerPlaceholer : I18N.OnboardingRegister.nameInputStaffPlaceholer
+        self.nameInputView.navigationBar.backButtonAction = {
             self.navigationController?.popViewController(animated: true)
         }
     }
     
     func bindViewModel() {
-        nameInputview.nextButton.rx.tap
+        nameInputView.nextButton.rx.tap
             .bind {
-                if let nameText = self.nameInputview.nameInputTextField.text {
+                if let nameText = self.nameInputView.nameInputTextField.text {
                     self.onboardingViewModel.inputs.saveName(name: nameText)
                 }
                 if let navigationController = self.navigationController {
@@ -72,6 +72,13 @@ extension NameInputViewController {
                         navigationController.pushViewController(InviteCodeViewController(viewModel: self.onboardingViewModel), animated: true)
                     }
                 }
+            }
+            .disposed(by: disposeBag)
+        
+        nameInputView.rx.tapGesture()
+            .when(.recognized)
+            .bind { _ in
+                self.nameInputView.endEditing(true)
             }
             .disposed(by: disposeBag)
     }
