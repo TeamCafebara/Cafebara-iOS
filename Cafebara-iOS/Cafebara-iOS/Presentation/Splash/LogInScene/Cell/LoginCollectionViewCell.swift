@@ -18,6 +18,7 @@ final class LoginCollectionViewCell: UICollectionViewCell, UICollectionViewRegis
     
     // MARK: - UI Components
     
+    private let loginImageView = UIImageView()
     
     // MARK: - Life Cycles
     
@@ -40,25 +41,29 @@ final class LoginCollectionViewCell: UICollectionViewCell, UICollectionViewRegis
 private extension LoginCollectionViewCell {
 
     func setUI() {
-        
+        backgroundColor = .clear
     }
 
     func setStyle() {
-        
+        loginImageView.do {
+            $0.contentMode = .scaleAspectFill
+        }
     }
     
     func setHierarchy() {
-        
+        addSubview(loginImageView)
     }
     
     func setLayout() {
-        
+        loginImageView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 }
 
 extension LoginCollectionViewCell {
 
-    func configureCell() {
-        
+    func configureCell(model: LoginImageDto) {
+        loginImageView.image = model.image
     }
 }
