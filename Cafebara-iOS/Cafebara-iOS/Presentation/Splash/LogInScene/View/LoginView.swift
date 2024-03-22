@@ -14,16 +14,17 @@ import AuthenticationServices
 final class LoginView: UIView {
     
     // MARK: - Properties
+    var timer: Timer?
+    var currentPageIndex: Int = 0
+    var completion: (() -> Void)? = nil
+    
     // MARK: - UI Components
     let loginCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     let loginPageControl = UIPageControl()
     let totalPages = 3
     let cellWidth: CGFloat = SizeLiterals.Screen.screenWidth
     let loginButton = ASAuthorizationAppleIDButton(type: .continue, style: .white)
-    
-    var timer: Timer?
-    var currentPageIndex: Int = 0
-    var completion: (() -> Void)? = nil
+    let testButton = UIButton()
     
     // MARK: - Life Cycles
     override init(frame: CGRect) {
@@ -110,24 +111,26 @@ private extension LoginView {
         LoginCollectionViewCell.register(target: loginCollectionView)
     }
     
-    private func startAutoScroll() {
+    func startAutoScroll() {
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { [weak self] _ in
             self?.scrollToNextPage()
         }
     }
     
-    private func scrollToNextPage() {
+    func scrollToNextPage() {
         let nextPageIndex = (currentPageIndex + 1) % totalPages
         scrollToPage(at: nextPageIndex)
     }
     
-    private func scrollToPage(at index: Int) {
-        loginCollectionView.scrollToItem(at: IndexPath(item: index, section: 0), at: .centeredHorizontally, animated: true)
+    func scrollToPage(at index: Int) {
+        loginCollectionView.scrollToItem(at: IndexPath(item: index, section: 0), 
+                                         at: .centeredHorizontally,
+                                         animated: true)
         currentPageIndex = index
         updatePageControl()
     }
     
-    private func updatePageControl() {
+    func updatePageControl() {
         loginPageControl.currentPage = currentPageIndex
     }
 }

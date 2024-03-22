@@ -13,7 +13,6 @@ import AuthenticationServices
 
 final class LoginViewController: UIViewController {
     
-    
     // MARK: - Properties
     private let viewModel = LoginViewModel()
     private let disposeBag = DisposeBag()

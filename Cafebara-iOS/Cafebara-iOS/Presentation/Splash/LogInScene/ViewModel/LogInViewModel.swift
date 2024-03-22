@@ -15,18 +15,15 @@ protocol LoginViewModelInputs {
 }
 
 protocol LoginViewModelOutputs {
-    
     var imageData: BehaviorRelay<[LoginImageDto]> { get }
 }
 
 protocol LoginViewModelType {
-    
     var inputs: LoginViewModelInputs { get }
     var outputs: LoginViewModelOutputs { get }
 }
 
 final class LoginViewModel: LoginViewModelInputs, LoginViewModelOutputs, LoginViewModelType {
-    
     var inputs: LoginViewModelInputs { return self }
     var outputs: LoginViewModelOutputs { return self }
  
