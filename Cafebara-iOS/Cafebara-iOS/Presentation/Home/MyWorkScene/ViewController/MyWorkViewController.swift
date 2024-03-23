@@ -13,7 +13,7 @@ import RxCocoa
 final class MyWorkViewController: UIViewController {
     
     // MARK: - Properties
-    private let myWorkViewModel = MyWorkViewModel()
+    private let myWorkViewModel = MyWorkViewModel() // 내부에서 만들면 안됨. init주입받아야함.
     private let disposeBag = DisposeBag()
     
     // MARK: - UI Components
@@ -48,49 +48,18 @@ extension MyWorkViewController {
     }
 
     func bindViewModel() {
-        myWorkViewModel.myWorkInfoObservable
-            .map { $0.date }
-            .bind(to: myWorkView.myWorkInfoView.dateLabel.rx.text)
+        myWorkViewModel.outputs.myWorkInfoData
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] data in
+                self?.myWorkView.myWorkInfoView.configureView(data: data)
+            })
             .disposed(by: disposeBag)
         
-        myWorkViewModel.myWorkInfoObservable
-            .map { $0.workKeyword }
-            .bind(to: myWorkView.myWorkInfoView.workKeywordLabel.rx.text)
-            .disposed(by: disposeBag)
-        
-        myWorkViewModel.myWorkInfoObservable
-            .map { $0.workKeywordTextColor }
-            .map { hexString in
-                UIColor(hex: hexString, alpha: 1.0)
-            }
-            .bind(to: myWorkView.myWorkInfoView.workKeywordLabel.rx.textColor)
-            .disposed(by: disposeBag)
-        
-        myWorkViewModel.myWorkInfoObservable
-            .map { $0.workKeywordBackColor }
-            .map { hexString in
-                UIColor(hex: hexString, alpha: 1.0)
-            }
-            .bind(to: myWorkView.myWorkInfoView.workKeywordLabel.rx.backgroundColor)
-            .disposed(by: disposeBag)
-        
-        myWorkViewModel.myWorkInfoObservable
-            .map { $0.startTime }
-            .bind(to: myWorkView.myWorkInfoView.workStartTimeLabel.rx.text)
-            .disposed(by: disposeBag)
-        
-        myWorkViewModel.myWorkInfoObservable
-            .map { $0.endTiem }
-            .bind(to: myWorkView.myWorkInfoView.workEndTimeLabel.rx.text)
-            .disposed(by: disposeBag)
-        
-        myWorkViewModel.myWorkInfoObservable
-            .map { $0.name }
-            .bind(to: myWorkView.myWorkInfoView.workerNameLabel.rx.text)
-            .disposed(by: disposeBag)
     }
     
     func setDelegate() {
-        
+//        myWorkView.askButton.rx.tap {
+//
+//        }
     }
 }
