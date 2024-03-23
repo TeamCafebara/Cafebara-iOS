@@ -20,16 +20,16 @@ final class MyWorkInfoView: UIView {
     
     // MARK: - UI Components
     
-    let dateLabel = UILabel()
+    private let dateLabel = UILabel()
     private let workTimeTitleLabel = UILabel()
-    let workKeywordLabel = CustomPaddingLabel(padding: UIEdgeInsets(top: 4, left: 10, bottom: 4, right: 10))
+    private let workKeywordLabel = CustomPaddingLabel(padding: UIEdgeInsets(top: 4, left: 10, bottom: 4, right: 10))
     private let workTimeStackView = UIStackView()
-    let workStartTimeLabel = UILabel()
+    private let workStartTimeLabel = UILabel()
     private let swungDashLabel = UILabel()
-    let workEndTimeLabel = UILabel()
+    private let workEndTimeLabel = UILabel()
     private let workerTitleLabel = UILabel()
-    let workerView = UIView()
-    let workerNameLabel = UILabel()
+    private let workerView = UIView()
+    private let workerNameLabel = UILabel()
     
     // MARK: - Life Cycles
     
@@ -192,15 +192,17 @@ private extension MyWorkInfoView {
             $0.leading.equalToSuperview().inset(16)
         }
     }
-    
-    func setRegisterCell() {
-        
-    }
 }
 
 extension MyWorkInfoView {
 
-    func configureView() {
-        
+    func configureView(data: MyWorkInfo) {
+        dateLabel.text = data.date
+        workKeywordLabel.text = data.workKeyword
+        workKeywordLabel.textColor = UIColor(hex: data.workKeywordTextColor)
+        workKeywordLabel.backgroundColor = UIColor(hex: data.workKeywordBackColor)
+        workStartTimeLabel.text = data.startTime
+        workEndTimeLabel.text = data.endTiem
+        workerNameLabel.text = data.name
     }
 }
