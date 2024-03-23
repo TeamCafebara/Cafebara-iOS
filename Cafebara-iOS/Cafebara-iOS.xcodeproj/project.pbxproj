@@ -402,8 +402,8 @@
 			isa = PBXGroup;
 			children = (
 				F13062902BA991D900E5B680 /* Model */,
-				F113CB452BA2EF9F00FA6D71 /* ViewController */,
 				F113CB472BA2EFBB00FA6D71 /* ViewModel */,
+				F113CB452BA2EF9F00FA6D71 /* ViewController */,
 				F113CB462BA2EFA700FA6D71 /* View */,
 			);
 			path = MyWorkScene;
