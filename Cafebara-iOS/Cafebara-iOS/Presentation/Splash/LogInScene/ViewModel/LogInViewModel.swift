@@ -7,9 +7,10 @@
 
 import UIKit
 
+import Moya
 import RxSwift
 import RxCocoa
-import Moya
+
 
 protocol LoginViewModelInputs {
 }

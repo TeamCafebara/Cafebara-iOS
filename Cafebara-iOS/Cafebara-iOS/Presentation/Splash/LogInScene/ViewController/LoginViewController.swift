@@ -7,20 +7,24 @@
 
 import UIKit
 
+import AuthenticationServices
 import RxSwift
 import RxCocoa
-import AuthenticationServices
+
 
 final class LoginViewController: UIViewController {
     
     // MARK: - Properties
+    
     private let viewModel = LoginViewModel()
     private let disposeBag = DisposeBag()
     
     // MARK: - UI Components
+    
     private let loginView = LoginView()
     
     // MARK: - Life Cycles
+    
     override func loadView() {
         view = loginView
     }

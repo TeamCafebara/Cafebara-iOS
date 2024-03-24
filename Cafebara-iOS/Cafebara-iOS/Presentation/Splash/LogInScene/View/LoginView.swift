@@ -7,18 +7,20 @@
 
 import UIKit
 
-import SnapKit
-import Then
 import AuthenticationServices
+import Then
+import SnapKit
 
 final class LoginView: UIView {
     
     // MARK: - Properties
+    
     var timer: Timer?
     var currentPageIndex: Int = 0
     var completion: (() -> Void)? = nil
     
     // MARK: - UI Components
+    
     let loginCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     let loginPageControl = UIPageControl()
     let totalPages = 3
@@ -27,6 +29,7 @@ final class LoginView: UIView {
     let testButton = UIButton()
     
     // MARK: - Life Cycles
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -45,6 +48,7 @@ final class LoginView: UIView {
 }
 
 // MARK: - Extensions
+
 private extension LoginView {
     func setUI() {
         self.backgroundColor = .backgroundBara
