@@ -25,5 +25,7 @@ enum I18N {
         static let workTimeTitle = "근무시간"
         static let wokerTitle = "근무자"
         static let swungDash = "~"
+        static let askReplacementNavigationTitle = "대타 요청"
+        static let askReplacementButtonTitle = "요청 보내기"
     }
 }

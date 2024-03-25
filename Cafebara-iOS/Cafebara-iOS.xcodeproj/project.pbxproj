@@ -58,6 +58,9 @@
 		F113CB502BA31AEC00FA6D71 /* CustomPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F113CB4F2BA31AEC00FA6D71 /* CustomPaddingLabel.swift */; };
 		F13062922BA991EA00E5B680 /* MyWorkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13062912BA991EA00E5B680 /* MyWorkInfo.swift */; };
 		F13062942BA99C8B00E5B680 /* MyWorkInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13062932BA99C8B00E5B680 /* MyWorkInfoView.swift */; };
+		F190A4A42BB1635B006440F0 /* AskReplacementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190A4A32BB1635B006440F0 /* AskReplacementViewController.swift */; };
+		F190A4A62BB16554006440F0 /* AskReplacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190A4A52BB16554006440F0 /* AskReplacementView.swift */; };
+		F190A4AA2BB18DC0006440F0 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = F190A4A92BB18DC0006440F0 /* RxGesture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +109,8 @@
 		F113CB4F2BA31AEC00FA6D71 /* CustomPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPaddingLabel.swift; sourceTree = "<group>"; };
 		F13062912BA991EA00E5B680 /* MyWorkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkInfo.swift; sourceTree = "<group>"; };
 		F13062932BA99C8B00E5B680 /* MyWorkInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkInfoView.swift; sourceTree = "<group>"; };
+		F190A4A32BB1635B006440F0 /* AskReplacementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskReplacementViewController.swift; sourceTree = "<group>"; };
+		F190A4A52BB16554006440F0 /* AskReplacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskReplacementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A488FB932B9B5E6E004D4A09 /* RxCocoa in Frameworks */,
+				F190A4AA2BB18DC0006440F0 /* RxGesture in Frameworks */,
 				A488FB8D2B9B5DF5004D4A09 /* Kingfisher in Frameworks */,
 				A488FB952B9B5E6E004D4A09 /* RxRelay in Frameworks */,
 				A488FBA22B9B5FC1004D4A09 /* SnapKit in Frameworks */,
@@ -133,6 +139,7 @@
 				A43C73ED2B9049C900B39F21 /* .swiftlint.yml */,
 				833A6AEF2B873317001370CD /* Cafebara-iOS */,
 				833A6AEE2B873317001370CD /* Products */,
+				F190A4A72BB18C99006440F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -413,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				F113CB482BA2EFCD00FA6D71 /* MyWorkViewController.swift */,
+				F190A4A32BB1635B006440F0 /* AskReplacementViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -422,6 +430,7 @@
 			children = (
 				F13062932BA99C8B00E5B680 /* MyWorkInfoView.swift */,
 				F113CB4A2BA2F2F600FA6D71 /* MyWorkView.swift */,
+				F190A4A52BB16554006440F0 /* AskReplacementView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -450,6 +459,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F190A4A72BB18C99006440F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -476,6 +492,7 @@
 				A488FB962B9B5E6E004D4A09 /* RxSwift */,
 				A488FBA12B9B5FC1004D4A09 /* SnapKit */,
 				A488FBA42B9B616B004D4A09 /* FSCalendar */,
+				F190A4A92BB18DC0006440F0 /* RxGesture */,
 			);
 			productName = "Cafebara-iOS";
 			productReference = 833A6AED2B873317001370CD /* Cafebara-iOS.app */;
@@ -512,6 +529,7 @@
 				A488FB912B9B5E6E004D4A09 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				A488FBA02B9B5FC1004D4A09 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				A488FBA32B9B616B004D4A09 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				F190A4A82BB18DC0006440F0 /* XCRemoteSwiftPackageReference "RxGesture" */,
 			);
 			productRefGroup = 833A6AEE2B873317001370CD /* Products */;
 			projectDirPath = "";
@@ -582,6 +600,7 @@
 				833DC8012B874D250096703B /* UIView+.swift in Sources */,
 				8304715E2B87BD22005AEEB4 /* UIImageView+.swift in Sources */,
 				833DC7FE2B874CED0096703B /* SizeLiterals.swift in Sources */,
+				F190A4A42BB1635B006440F0 /* AskReplacementViewController.swift in Sources */,
 				833A6AF52B873317001370CD /* ViewController.swift in Sources */,
 				A43C74062B90527000B39F21 /* HomeAPI.swift in Sources */,
 				A488FBA82B9B6B8E004D4A09 /* CustomButton.swift in Sources */,
@@ -601,6 +620,7 @@
 				F113CB492BA2EFCD00FA6D71 /* MyWorkViewController.swift in Sources */,
 				F13062942BA99C8B00E5B680 /* MyWorkInfoView.swift in Sources */,
 				833A6AF32B873317001370CD /* SceneDelegate.swift in Sources */,
+				F190A4A62BB16554006440F0 /* AskReplacementView.swift in Sources */,
 				830471542B87B9E2005AEEB4 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -871,6 +891,14 @@
 				minimumVersion = 2.8.4;
 			};
 		};
+		F190A4A82BB18DC0006440F0 /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -913,6 +941,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A488FBA32B9B616B004D4A09 /* XCRemoteSwiftPackageReference "FSCalendar" */;
 			productName = FSCalendar;
+		};
+		F190A4A92BB18DC0006440F0 /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F190A4A82BB18DC0006440F0 /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
