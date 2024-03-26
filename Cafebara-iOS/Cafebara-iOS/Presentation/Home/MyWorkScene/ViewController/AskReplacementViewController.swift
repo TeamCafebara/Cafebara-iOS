@@ -65,6 +65,11 @@ extension AskReplacementViewController {
                 self?.askReplacementView.configureView(data: data)
             })
             .disposed(by: disposeBag)
+        viewModel.outputs.workerNameData
+            .bind(onNext: { [weak self ] data in
+                self?.askReplacementView.nameDropDownView.dataSource = data
+            })
+            .disposed(by: disposeBag)
     }
     
     func setDelegate() {

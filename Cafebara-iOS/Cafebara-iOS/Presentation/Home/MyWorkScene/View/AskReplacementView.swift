@@ -127,7 +127,6 @@ private extension AskReplacementView {
             $0.font = .fontBara(.body4)
             $0.placeholderColor = .gray7
             $0.selectedItemTextColor = .gray7
-            $0.dataSource = ["김보연", "방민지", "고아라", "김가현"]
         }
     }
     
