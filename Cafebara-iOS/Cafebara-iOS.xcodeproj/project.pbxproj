@@ -61,6 +61,8 @@
 		F190A4A42BB1635B006440F0 /* AskReplacementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190A4A32BB1635B006440F0 /* AskReplacementViewController.swift */; };
 		F190A4A62BB16554006440F0 /* AskReplacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190A4A52BB16554006440F0 /* AskReplacementView.swift */; };
 		F190A4AA2BB18DC0006440F0 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = F190A4A92BB18DC0006440F0 /* RxGesture */; };
+		F190A4AE2BB1BB36006440F0 /* CustomDropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190A4AD2BB1BB36006440F0 /* CustomDropDownView.swift */; };
+		F190A4B02BB2B743006440F0 /* CustomDropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F190A4AF2BB2B743006440F0 /* CustomDropDownTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +113,8 @@
 		F13062932BA99C8B00E5B680 /* MyWorkInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkInfoView.swift; sourceTree = "<group>"; };
 		F190A4A32BB1635B006440F0 /* AskReplacementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskReplacementViewController.swift; sourceTree = "<group>"; };
 		F190A4A52BB16554006440F0 /* AskReplacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskReplacementView.swift; sourceTree = "<group>"; };
+		F190A4AD2BB1BB36006440F0 /* CustomDropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownView.swift; sourceTree = "<group>"; };
+		F190A4AF2BB2B743006440F0 /* CustomDropDownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +373,7 @@
 				A488FB442B9AFADD004D4A09 /* CustomNavigation */,
 				A488FB522B9B10DE004D4A09 /* CustomAlert */,
 				F113CB4E2BA31ABE00FA6D71 /* CustomLabel */,
+				F190A4AC2BB1BAF6006440F0 /* CustomDropDown */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -464,6 +469,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F190A4AC2BB1BAF6006440F0 /* CustomDropDown */ = {
+			isa = PBXGroup;
+			children = (
+				F190A4AD2BB1BB36006440F0 /* CustomDropDownView.swift */,
+				F190A4AF2BB2B743006440F0 /* CustomDropDownTableViewCell.swift */,
+			);
+			path = CustomDropDown;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -605,6 +619,7 @@
 				A43C74062B90527000B39F21 /* HomeAPI.swift in Sources */,
 				A488FBA82B9B6B8E004D4A09 /* CustomButton.swift in Sources */,
 				833A6AF12B873317001370CD /* AppDelegate.swift in Sources */,
+				F190A4B02BB2B743006440F0 /* CustomDropDownTableViewCell.swift in Sources */,
 				833DC8082B874DD90096703B /* UICollectionViewRegisterable.swift in Sources */,
 				833DC8172B8751150096703B /* a.swift in Sources */,
 				830471562B87BA0E005AEEB4 /* UIStackView+.swift in Sources */,
@@ -613,6 +628,7 @@
 				833DC8152B8750F30096703B /* HomeView.swift in Sources */,
 				A43C73FC2B90517200B39F21 /* URLConstant.swift in Sources */,
 				833DC8062B874D9A0096703B /* NSObject+.swift in Sources */,
+				F190A4AE2BB1BB36006440F0 /* CustomDropDownView.swift in Sources */,
 				8304715C2B87BBEB005AEEB4 /* UITextField+.swift in Sources */,
 				A43C73F42B90513900B39F21 /* Config.swift in Sources */,
 				A43C73F82B90515D00B39F21 /* NetworkLoggerPlugin.swift in Sources */,
