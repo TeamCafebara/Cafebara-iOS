@@ -13,7 +13,8 @@ import RxCocoa
 final class MyWorkViewController: UIViewController {
     
     // MARK: - Properties
-    private let myWorkViewModel = MyWorkViewModel() // 내부에서 만들면 안됨. init주입받아야함.
+    
+    private let viewModel = MyWorkViewModel() // 내부에서 만들면 안됨. init주입받아야함.
     private let disposeBag = DisposeBag()
     
     // MARK: - UI Components
@@ -38,28 +39,29 @@ final class MyWorkViewController: UIViewController {
 // MARK: - Extensions
 
 extension MyWorkViewController {
-
+    
     func setUI() {
         self.navigationController?.navigationBar.isHidden = true
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         myWorkView.navigationBar.backButtonAction = {
-            self.navigationController?.popViewController(animated: false)
+            self.navigationController?.popViewController(animated: true)
         }
     }
-
+    
     func bindViewModel() {
-        myWorkViewModel.outputs.myWorkInfoData
+        viewModel.outputs.myWorkInfoData
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] data in
-                self?.myWorkView.myWorkInfoView.configureView(data: data)
+                self?.myWorkView.configureView(data: data)
             })
             .disposed(by: disposeBag)
-        
     }
     
     func setDelegate() {
-//        myWorkView.askButton.rx.tap {
-//
-//        }
+        myWorkView.askButton.rx.tap
+            .bind {
+                self.navigationController?.pushViewController(AskReplacementViewController(viewModel: self.viewModel), animated: true)
+            }
+            .disposed(by: disposeBag)
     }
 }
