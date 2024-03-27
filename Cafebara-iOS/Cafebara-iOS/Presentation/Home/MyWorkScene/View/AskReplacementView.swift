@@ -29,7 +29,7 @@ final class AskReplacementView: UIView {
                                  type: .noBorder,
                                  title: I18N.MyWork.askReplacementButtonTitle)
     let alertview = CustomAlertView(type: .medium,
-                                    title: "김가현 님께\n 대타요청을 보내실건가요?",
+                                    title: "",
                                     subTitle: "")
 
     // MARK: - Life Cycles
