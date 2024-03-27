@@ -28,7 +28,10 @@ final class AskReplacementView: UIView {
     let askButton = CustomButton(status: false,
                                  type: .noBorder,
                                  title: I18N.MyWork.askReplacementButtonTitle)
-    
+    let alertview = CustomAlertView(type: .medium,
+                                    title: "김가현 님께\n 대타요청을 보내실건가요?",
+                                    subTitle: "")
+
     // MARK: - Life Cycles
     
     override init(frame: CGRect) {
@@ -128,13 +131,18 @@ private extension AskReplacementView {
             $0.placeholderColor = .gray7
             $0.selectedItemTextColor = .gray7
         }
+        
+        alertview.do {
+            $0.isHidden = true
+        }
     }
     
     func setHierarchy() {
         addSubviews(navigationBar,
                     myWorkInfoView,
                     nameDropDownView,
-                    askButton)
+                    askButton,
+                    alertview)
         
         myWorkInfoView.addSubviews(dateLabel,
                                    workTimeTitleLabel,
@@ -195,6 +203,10 @@ private extension AskReplacementView {
             $0.bottom.equalTo(safeAreaLayoutGuide).offset(-14)
             $0.centerX.equalToSuperview()
         }
+        
+        alertview.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 }
 
@@ -208,5 +220,9 @@ extension AskReplacementView {
         workStartTimeLabel.text = data.startTime
         workEndTimeLabel.text = data.endTiem
         nameDropDownView.placeholder = data.name
+    }
+    
+    func configureView(nameData: [String]) {
+        nameDropDownView.dataSource = nameData
     }
 }
