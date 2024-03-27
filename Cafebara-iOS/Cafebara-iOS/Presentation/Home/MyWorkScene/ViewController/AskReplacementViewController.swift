@@ -60,24 +60,29 @@ extension AskReplacementViewController {
     
     func bindViewModel() {
         viewModel.outputs.myWorkInfoData
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] data in
+            .bind { [weak self] data in
                 self?.askReplacementView.configureView(data: data)
-            })
+            }
             .disposed(by: disposeBag)
         viewModel.outputs.workerNameData
-            .bind(onNext: { [weak self ] data in
-                self?.askReplacementView.nameDropDownView.dataSource = data
-            })
+            .bind { [weak self] data in
+                self?.askReplacementView.configureView(nameData: data)
+            }
+            .disposed(by: disposeBag)
+        viewModel.outputs.alertTitle
+            .bind { [weak self] title, name in
+                self?.askReplacementView.alertview.configureView(title: title, name: name)
+            }
             .disposed(by: disposeBag)
     }
     
     func setDelegate() {
         askReplacementView.nameDropDownView.delegate = self
+        askReplacementView.alertview.delegate = self
         
         askReplacementView.askButton.rx.tap
-            .bind {
-                // TODO: 대타요청팝업뷰
+            .bind { [weak self] _ in
+                self?.askReplacementView.alertview.isHidden = false
             }
             .disposed(by: disposeBag)
     }
@@ -86,5 +91,17 @@ extension AskReplacementViewController {
 extension AskReplacementViewController: DropDownTappedDelegate {
     func dropDownCellTapped(indexPath: IndexPath) {
         askReplacementView.askButton.isEnabled = true
+        viewModel.inputs.saveReplaceWorkerIndexPath(indexPath: indexPath)
+    }
+}
+
+extension AskReplacementViewController: AlertTappedDelegate {
+    func leftButtonTapped() {
+        askReplacementView.alertview.isHidden = true
+    }
+    
+    func rightButtonTapped() {
+        // TODO: 캘린더 메인화면에 토스트메시지 띄우기 + 통신 연결
+        navigationController?.popToRootViewController(animated: true)
     }
 }
