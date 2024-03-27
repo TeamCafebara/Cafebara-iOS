@@ -29,7 +29,7 @@ final class RoleChoiceView: UIView {
     private let staffStackView = UIStackView()
     private let staffImage = UIImageView(image: .profile)
     private let staffTitle = UILabel()
-    lazy var nextButton = CustomButton(status: false, 
+    let nextButton = CustomButton(status: false,
                                        type: .noBorder,
                                        title: I18N.Common.nextButtonTitle)
     
@@ -176,18 +176,14 @@ extension RoleChoiceView {
     
     func ownerViewTapped() {
         isOwnerSelected.toggle()
-        if isOwnerSelected {
-            isStaffSelected = false
-        }
+        isStaffSelected = false
         updateChoiceView()
         updateButton()
     }
     
     func staffViewTapped() {
         isStaffSelected.toggle()
-        if isStaffSelected {
-            isOwnerSelected = false
-        }
+        isOwnerSelected = false
         updateChoiceView()
         updateButton()
     }
