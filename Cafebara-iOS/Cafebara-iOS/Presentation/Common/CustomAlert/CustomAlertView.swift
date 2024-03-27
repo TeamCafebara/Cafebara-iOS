@@ -208,3 +208,10 @@ private extension CustomAlertView {
             .disposed(by: disposeBag)
     }
 }
+
+extension CustomAlertView {
+    func configureView(title: String, name: String) {
+        alertTitleLabel.text = title
+        alertTitleLabel.asColor(targetString: name, color: .blueBara)
+    }
+}
