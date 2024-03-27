@@ -11,7 +11,6 @@ import AuthenticationServices
 import RxSwift
 import RxCocoa
 
-
 final class LoginViewController: UIViewController {
     
     // MARK: - Properties
@@ -44,10 +43,10 @@ extension LoginViewController {
         viewModel.outputs.imageData
             .bind(to: loginView.loginCollectionView.rx
                 .items(cellIdentifier: LoginCollectionViewCell.className,
-                       cellType: LoginCollectionViewCell.self)) { (index, model, cell) in
+                       cellType: LoginCollectionViewCell.self)) { (_, model, cell) in
                 cell.configureCell(model: model)
             }
-                       .disposed(by: disposeBag)
+            .disposed(by: disposeBag)
     }
     
     func setTarget() {
@@ -66,7 +65,7 @@ extension LoginViewController {
     }
 }
 
-extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding{
+extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return self.view.window!
     }
