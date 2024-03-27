@@ -74,6 +74,11 @@
 		A488FBA52B9B616B004D4A09 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = A488FBA42B9B616B004D4A09 /* FSCalendar */; };
 		A488FBA82B9B6B8E004D4A09 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488FBA72B9B6B8E004D4A09 /* CustomButton.swift */; };
 		A488FBAB2B9B81AB004D4A09 /* CustomToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488FBAA2B9B81AB004D4A09 /* CustomToastMessage.swift */; };
+		E5054DB22BA195F0004056EE /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5054DB12BA195F0004056EE /* LogInViewModel.swift */; };
+		E5EE0E632BA19B8B0095F80E /* LoginCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EE0E622BA19B8B0095F80E /* LoginCollectionViewCell.swift */; };
+		E5EE0E652BA19C270095F80E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EE0E642BA19C270095F80E /* LoginView.swift */; };
+		E5EE0E672BA19CFC0095F80E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EE0E662BA19CFC0095F80E /* LoginViewController.swift */; };
+		E5EE0E6D2BA1A45B0095F80E /* LoginImageDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EE0E6C2BA1A45B0095F80E /* LoginImageDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +138,12 @@
 		A488FB532B9B10FB004D4A09 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		A488FBA72B9B6B8E004D4A09 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A488FBAA2B9B81AB004D4A09 /* CustomToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToastMessage.swift; sourceTree = "<group>"; };
+		E50200812BA9FF440056D561 /* Cafebara-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Cafebara-iOS.entitlements"; sourceTree = "<group>"; };
+		E5054DB12BA195F0004056EE /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
+		E5EE0E622BA19B8B0095F80E /* LoginCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCollectionViewCell.swift; sourceTree = "<group>"; };
+		E5EE0E642BA19C270095F80E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E5EE0E662BA19CFC0095F80E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E5EE0E6C2BA1A45B0095F80E /* LoginImageDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginImageDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +205,7 @@
 		833DC7F22B874C030096703B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E5054DA72BA194CF004056EE /* Splash */,
 				A488FB432B9AFAD5004D4A09 /* Common */,
 				833DC8092B8750120096703B /* Home */,
 				A41289D92B9F729500E3462D /* Onboarding */,
@@ -486,6 +498,7 @@
 		A43C73E22B8F30BD00B39F21 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E5EE0E6A2BA1A4450095F80E /* Data */,
 				A43C73F22B90512B00B39F21 /* Base */,
 				A43C73F12B90512500B39F21 /* Enviornment */,
 				A43C73F02B90512200B39F21 /* API */,
@@ -691,6 +704,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A43C74002B90518800B39F21 /* BaseTargetType.swift in Sources */,
+				E5EE0E6D2BA1A45B0095F80E /* LoginImageDto.swift in Sources */,
 				833DC7FA2B874CD50096703B /* FontLiterals.swift in Sources */,
 				A43C73F62B90515300B39F21 /* GeneralResponse.swift in Sources */,
 				A488FB462B9AFAF4004D4A09 /* CustomNavigationView.swift in Sources */,
@@ -700,6 +714,7 @@
 				830471582B87BA52005AEEB4 /* UILabel+.swift in Sources */,
 				A41289EF2BA04CC100E3462D /* CustomTextField.swift in Sources */,
 				A41289DF2B9F72FE00E3462D /* RoleChoiceView.swift in Sources */,
+				E5EE0E652BA19C270095F80E /* LoginView.swift in Sources */,
 				833DC7FC2B874CE50096703B /* StringLiterals.swift in Sources */,
 				A41289E32B9F731300E3462D /* RoleChoiceViewController.swift in Sources */,
 				8304715A2B87BBC2005AEEB4 /* UIButton+.swift in Sources */,
@@ -714,8 +729,10 @@
 				8304715E2B87BD22005AEEB4 /* UIImageView+.swift in Sources */,
 				833DC7FE2B874CED0096703B /* SizeLiterals.swift in Sources */,
 				833A6AF52B873317001370CD /* ViewController.swift in Sources */,
+				E5EE0E632BA19B8B0095F80E /* LoginCollectionViewCell.swift in Sources */,
 				83752E3E2B9F086D0060F047 /* TabBarItem.swift in Sources */,
 				A43C74062B90527000B39F21 /* HomeAPI.swift in Sources */,
+				E5054DB22BA195F0004056EE /* LogInViewModel.swift in Sources */,
 				A488FBA82B9B6B8E004D4A09 /* CustomButton.swift in Sources */,
 				833A6AF12B873317001370CD /* AppDelegate.swift in Sources */,
 				A43B22F82BA3393100E15CC3 /* InviteCodeView.swift in Sources */,
@@ -729,6 +746,7 @@
 				A43C74032B90525F00B39F21 /* HomeTarget.swift in Sources */,
 				833DC8152B8750F30096703B /* HomeView.swift in Sources */,
 				A43C73FC2B90517200B39F21 /* URLConstant.swift in Sources */,
+				E5EE0E672BA19CFC0095F80E /* LoginViewController.swift in Sources */,
 				833DC8062B874D9A0096703B /* NSObject+.swift in Sources */,
 				8304715C2B87BBEB005AEEB4 /* UITextField+.swift in Sources */,
 				A43C73F42B90513900B39F21 /* Config.swift in Sources */,
