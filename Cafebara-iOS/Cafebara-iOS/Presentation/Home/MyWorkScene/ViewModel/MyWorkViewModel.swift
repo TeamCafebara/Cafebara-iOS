@@ -8,15 +8,17 @@
 import UIKit
 
 import RxSwift
+import RxRelay
 import Moya
 
 protocol MyWorkViewModelInputs {
-    func saveReplaceWorkerName(name: String)
+    func saveReplaceWorkerIndexPath(indexPath: IndexPath)
 }
 
 protocol MyWorkViewModelOutputs {
     var myWorkInfoData: BehaviorSubject<MyWorkInfo> { get }
     var workerNameData: BehaviorSubject<[String]> { get }
+    var alertTitle: PublishRelay<(String, String)> { get }
 }
 
 protocol MyWorkViewModelType {
@@ -29,27 +31,35 @@ final class MyWorkViewModel: MyWorkViewModelInputs, MyWorkViewModelOutputs, MyWo
     var inputs: MyWorkViewModelInputs { return self }
     var outputs: MyWorkViewModelOutputs { return self }
     
-    var replaceWorkerName: String = ""
+    private let disposeBag = DisposeBag()
+    
+    var replaceWorkerIndexPath: IndexPath?
     
     // input
     
-    func saveReplaceWorkerName(name: String) {
-        self.replaceWorkerName = name
+    func saveReplaceWorkerIndexPath(indexPath: IndexPath) {
+        self.replaceWorkerIndexPath = indexPath
+        workerNameData
+            .subscribe(onNext: { [weak self] nameData in
+                self?.alertTitle.accept((nameData[indexPath.row] + I18N.MyWork.addAlertTitle, nameData[indexPath.row]))
+            })
+            .disposed(by: disposeBag)
     }
     
     // output
     // TODO: 서버 통신시 PublishSubject로 변경하기
     var myWorkInfoData = BehaviorSubject<MyWorkInfo>(value: MyWorkInfo(
-        date: "02.14 수요일",
-        workKeyword: "오픈",
-        workKeywordTextColor: "#1F9BB6",
-        workKeywordBackColor: "#EAFBFA",
-        startTime: "9:00",
-        endTiem: "13:00",
-        name: "강민수"
+        date: "",
+        workKeyword: "",
+        workKeywordTextColor: "",
+        workKeywordBackColor: "",
+        startTime: "",
+        endTiem: "",
+        name: ""
     ))
     
-    var workerNameData = BehaviorSubject<[String]>(value:["강민수1", "강민수2", "강민수3", "강민수4", "강민수5", "강민수6", "강민수7", "고아라", "김가현", "방민지", "김보연"])
+    var workerNameData = BehaviorSubject<[String]>(value:[])
+    var alertTitle = PublishRelay<(String, String)>()
     
     init() {
         // TODO: 서버 통신 받기 이전 DTO
@@ -62,9 +72,11 @@ final class MyWorkViewModel: MyWorkViewModelInputs, MyWorkViewModelOutputs, MyWo
             endTiem: "13:00",
             name: "강민수")
         myWorkInfoData.onNext(myWorkInfo)
+        
+        let workerNameInfo: [String] = ["강민수1", "강민수2", "강민수3", "강민수4", "강민수5", "강민수6", "강민수7", "고아라", "김가현", "방민지", "김보연"]
+        workerNameData.onNext(workerNameInfo)
     }
 }
 
 extension MyWorkViewModel {
-    
 }
