@@ -17,7 +17,7 @@ final class LoginView: UIView {
     
     var timer: Timer?
     var currentPageIndex: Int = 0
-    var completion: (() -> Void)? = nil
+    var completion: (() -> Void)?
     
     // MARK: - UI Components
     
@@ -85,7 +85,7 @@ private extension LoginView {
     }
     
     func setHierarchy() {
-        addSubviews(loginCollectionView, 
+        addSubviews(loginCollectionView,
                     loginPageControl,
                     loginButton)
     }
@@ -127,7 +127,7 @@ private extension LoginView {
     }
     
     func scrollToPage(at index: Int) {
-        loginCollectionView.scrollToItem(at: IndexPath(item: index, section: 0), 
+        loginCollectionView.scrollToItem(at: IndexPath(item: index, section: 0),
                                          at: .centeredHorizontally,
                                          animated: true)
         currentPageIndex = index
