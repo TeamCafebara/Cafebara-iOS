@@ -42,6 +42,7 @@ final class NameInputViewController: UIViewController {
         
         setUI()
         bindViewModel()
+        setTextField()
     }
 }
 
@@ -74,12 +75,43 @@ extension NameInputViewController {
                 }
             }
             .disposed(by: disposeBag)
-        
+    }
+    
+    func setTextField() {
         nameInputView.rx.tapGesture()
             .when(.recognized)
             .bind { _ in
                 self.nameInputView.endEditing(true)
             }
+            .disposed(by: disposeBag)
+        
+        nameInputView.nameInputTextField.rx.text
+            .orEmpty
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] changedText in
+                guard let self = self else { return }
+                if changedText.isEmpty {
+                    self.nameInputView.nameInputTextField.textFieldStatus = .normal
+                    self.nameInputView.nextButton.isEnabled = false
+                } else {
+                    self.nameInputView.nameInputTextField.textFieldStatus = .editing
+                    self.nameInputView.nextButton.isEnabled = true
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        nameInputView.nameInputTextField.rx.controlEvent(.editingDidEndOnExit)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.nameInputView.nameInputTextField.resignFirstResponder()
+            })
+            .disposed(by: disposeBag)
+        
+        nameInputView.nameInputTextField.rx.controlEvent(.editingDidBegin)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.nameInputView.nameInputTextField.becomeFirstResponder()
+            })
             .disposed(by: disposeBag)
     }
 }

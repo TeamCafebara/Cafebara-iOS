@@ -43,6 +43,7 @@ final class InviteCodeViewController: UIViewController {
         
         setUI()
         bindViewModel()
+        setTextField()
     }
 }
 
@@ -105,6 +106,44 @@ extension InviteCodeViewController {
                     self.inviteCodeView.codeInputTextField.isUserInteractionEnabled = false
                     self.inviteCodeView.nextButton.isEnabled = true
                 }
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func setTextField() {
+        inviteCodeView.rx.tapGesture()
+            .when(.recognized)
+            .bind { _ in
+                self.inviteCodeView.endEditing(true)
+            }
+            .disposed(by: disposeBag)
+        
+        inviteCodeView.codeInputTextField.rx.text
+            .orEmpty
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] changedText in
+                guard let self = self else { return }
+                if changedText.isEmpty {
+                    self.inviteCodeView.codeInputTextField.textFieldStatus = .normal
+                    self.inviteCodeView.codeCertifyButton.isEnabled = false
+                } else {
+                    self.inviteCodeView.codeInputTextField.textFieldStatus = .editing
+                    self.inviteCodeView.codeCertifyButton.isEnabled = true
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        inviteCodeView.codeInputTextField.rx.controlEvent(.editingDidEndOnExit)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.inviteCodeView.codeInputTextField.resignFirstResponder()
+            })
+            .disposed(by: disposeBag)
+        
+        inviteCodeView.codeInputTextField.rx.controlEvent(.editingDidBegin)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.inviteCodeView.codeInputTextField.becomeFirstResponder()
             })
             .disposed(by: disposeBag)
     }

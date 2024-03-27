@@ -46,7 +46,6 @@ final class InviteCodeView: UIView {
         setStyle()
         setHierarchy()
         setLayout()
-        setDelegate()
     }
     
     @available(*, unavailable)
@@ -206,10 +205,6 @@ private extension InviteCodeView {
             $0.centerX.equalToSuperview()
             $0.bottom.equalTo(safeAreaLayoutGuide).offset(-SizeLiterals.Screen.screenHeight * 52 / 667)
         }
-    }
-    
-    func setDelegate() {
-        codeInputTextField.delegate = self
     }
 }
 

@@ -42,6 +42,7 @@ final class StoreInputViewController: UIViewController {
         
         setUI()
         bindViewModel()
+        setTextField()
     }
 }
 
@@ -73,6 +74,59 @@ extension StoreInputViewController {
             .bind { _ in
                 self.storeInputView.endEditing(true)
             }
+            .disposed(by: disposeBag)
+    }
+    
+    func checkStoreCount(_ store: String) -> Bool {
+       return store.count > 18 || store.containsEmoji
+   }
+    
+    func setTextField() {
+        storeInputView.rx.tapGesture()
+            .when(.recognized)
+            .bind { _ in
+                self.storeInputView.endEditing(true)
+            }
+            .disposed(by: disposeBag)
+        
+        storeInputView.storeInputTextField.rx.text
+            .orEmpty
+            .distinctUntilChanged()
+            .map(checkStoreCount(_:))
+            .subscribe(onNext: { bool in
+                if bool {
+                    self.storeInputView.storeInputTextField.resignFirstResponder()
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        storeInputView.storeInputTextField.rx.text
+            .orEmpty
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] changedText in
+                guard let self = self else { return }
+                if changedText.isEmpty {
+                    self.storeInputView.storeInputTextField.textFieldStatus = .normal
+                    self.storeInputView.nextButton.isEnabled = false
+                } else {
+                    self.storeInputView.storeInputTextField.textFieldStatus = .editing
+                    self.storeInputView.nextButton.isEnabled = true
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        storeInputView.storeInputTextField.rx.controlEvent(.editingDidEndOnExit)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.storeInputView.storeInputTextField.resignFirstResponder()
+            })
+            .disposed(by: disposeBag)
+        
+        storeInputView.storeInputTextField.rx.controlEvent(.editingDidBegin)
+            .subscribe(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.storeInputView.storeInputTextField.becomeFirstResponder()
+            })
             .disposed(by: disposeBag)
     }
 }

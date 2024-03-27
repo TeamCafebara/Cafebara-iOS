@@ -29,7 +29,6 @@ final class NameInputView: UIView {
         setStyle()
         setHierarchy()
         setLayout()
-        setDelegate()
     }
     
     @available(*, unavailable)
@@ -84,43 +83,5 @@ private extension NameInputView {
             $0.bottom.equalTo(safeAreaLayoutGuide).offset(-14)
             $0.centerX.equalToSuperview()
         }
-    }
-    
-    func setDelegate() {
-        nameInputTextField.delegate = self
-    }
-}
-
-extension NameInputView: UITextFieldDelegate {
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let text = textField.text else { return true }
-        if let customTextField = textField as? CustomTextField {
-            customTextField.textFieldStatus = .editing
-        }
-        let newText = (text as NSString).replacingCharacters(in: range, with: string)
-        print(newText)
-        return true
-    }
-    
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        let currentText = textField.text ?? ""
-        if currentText.isEmpty {
-            if let customTextField = textField as? CustomTextField {
-                customTextField.textFieldStatus = .normal
-            }
-            nextButton.isEnabled = false
-        } else {
-            nextButton.isEnabled = true			
-        }
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.becomeFirstResponder()
     }
 }

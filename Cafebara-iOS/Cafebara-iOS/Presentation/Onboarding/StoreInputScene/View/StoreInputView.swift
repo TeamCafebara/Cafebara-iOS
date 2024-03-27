@@ -29,7 +29,6 @@ final class StoreInputView: UIView {
         setStyle()
         setHierarchy()
         setLayout()
-        setDelegate()
     }
     
     @available(*, unavailable)
@@ -86,44 +85,19 @@ private extension StoreInputView {
             $0.centerX.equalToSuperview()
         }
     }
-    
-    func setDelegate() {
-        storeInputTextField.delegate = self
-    }
 }
 
-extension StoreInputView: UITextFieldDelegate {
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let text = textField.text else { return true }
-        if let customTextField = textField as? CustomTextField {
-            customTextField.textFieldStatus = .editing
-        }
-        let newText = (text as NSString).replacingCharacters(in: range, with: string)
-        if newText.count > 18 || string.containsEmoji {
-            return false
-        }
-        return true
-    }
-    
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        let currentText = textField.text ?? ""
-        if currentText.isEmpty {
-            if let customTextField = textField as? CustomTextField {
-                customTextField.textFieldStatus = .normal
-            }
-            nextButton.isEnabled = false
-        } else {
-            nextButton.isEnabled = true
-        }
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.becomeFirstResponder()
-    }
-}
+//extension StoreInputView: UITextFieldDelegate {
+//    
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        guard let text = textField.text else { return true }
+//        if let customTextField = textField as? CustomTextField {
+//            customTextField.textFieldStatus = .editing
+//        }
+//        let newText = (text as NSString).replacingCharacters(in: range, with: string)
+//        if newText.count > 18 || string.containsEmoji {
+//            return false
+//        }
+//        return true
+//    }
+//}
