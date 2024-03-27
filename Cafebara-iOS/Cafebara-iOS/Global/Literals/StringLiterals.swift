@@ -27,5 +27,6 @@ enum I18N {
         static let swungDash = "~"
         static let askReplacementNavigationTitle = "대타 요청"
         static let askReplacementButtonTitle = "요청 보내기"
+        static let addAlertTitle = " 님께\n대타 요청을 보내실 건가요?"
     }
 }
