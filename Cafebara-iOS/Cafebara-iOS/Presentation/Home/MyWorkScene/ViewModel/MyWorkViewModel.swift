@@ -58,7 +58,7 @@ final class MyWorkViewModel: MyWorkViewModelInputs, MyWorkViewModelOutputs, MyWo
         name: ""
     ))
     
-    var workerNameData = BehaviorSubject<[String]>(value:[])
+    var workerNameData = BehaviorSubject<[String]>(value: [])
     var alertTitle = PublishRelay<(String, String)>()
     
     init() {
