@@ -46,4 +46,16 @@ enum I18N {
         static let startButtonTitle = "시작하기"
         static let registerCompleteTitle = "사장과 직원이 함께 보는\n카페바라, 같이 시작해 보아요!"
     }
+    
+    enum MyWork {
+        static let myWorkNavigationTitle = "나의 근무"
+        static let askChangingWorkButtonTitle = "대타 요청하기"
+        static let askButtonTitle = "요청 보내기"
+        static let workTimeTitle = "근무시간"
+        static let wokerTitle = "근무자"
+        static let swungDash = "~"
+        static let askReplacementNavigationTitle = "대타 요청"
+        static let askReplacementButtonTitle = "요청 보내기"
+        static let addAlertTitle = " 님께\n대타 요청을 보내실 건가요?"
+    }
 }
