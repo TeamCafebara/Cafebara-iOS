@@ -15,7 +15,7 @@ final class AskReplacementView: UIView {
     // MARK: - UI Components
     
     let navigationBar = CustomNavigationView()
-    let myWorkInfoView = UIView()
+    private let myWorkInfoView = UIView()
     private let dateLabel = UILabel()
     private let workTimeTitleLabel = UILabel()
     private let workKeywordLabel = CustomPaddingLabel(padding: UIEdgeInsets(top: 4, left: 10, bottom: 4, right: 10))
