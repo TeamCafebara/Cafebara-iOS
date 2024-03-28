@@ -60,3 +60,5 @@ xcuserdata/
 *.xcconfig
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swiftpackagemanager,macos
+
+Cafebara-iOS/Cafebara-iOS/GoogleService-Info.plist
