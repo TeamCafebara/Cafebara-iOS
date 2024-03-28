@@ -29,7 +29,7 @@ final class AskReplacementView: UIView {
                                  type: .noBorder,
                                  title: I18N.MyWork.askReplacementButtonTitle)
     let alertview = CustomAlertView(type: .medium,
-                                    title: "",
+                                    title: I18N.Common.alertContainTitle,
                                     subTitle: "")
 
     // MARK: - Life Cycles
